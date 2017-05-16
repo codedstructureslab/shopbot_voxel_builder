@@ -1,0 +1,12 @@
+'load_bolt.sbp
+SO,10, 1
+SO,11, 1
+SO,12, 0
+SO, 9, 1
+PAUSE 1
+SO, 9, 0
+SO,10, 0
+SO,11, 0
+SO,12, 0
+'
+END

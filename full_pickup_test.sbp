@@ -1,0 +1,15 @@
+''M3 0,0,0
+FP, pickup_screw.sbp, 1,1,1,1,0
+FP, pickup_nut.sbp, 1,1,1,1,0
+FP, pickup_voxel_0.sbp, 1,1,1,1,0
+''
+'' transition back
+ST
+VS 5,5,5,5,22,22,22,22      ' set speed resume (xy,z,a,b,jxy,jz,ja,jb)                          '
+J3 -200,-200,200
+J5 -200,-200,200,0,0
+J3 -15,-15,30
+J3 -10,-10,10          
+VS 2,2,2,2,10,10,10,10      ' set speed resume (xy,z,a,b,jxy,jz,ja,jb)
+m3 0,0,0                    ' moves to zero table 
+VS 5,5,5,5,20,20,20,20      ' set speed resume (xy,z,a,b,jxy,jz,ja,jb)

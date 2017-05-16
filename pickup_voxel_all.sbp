@@ -1,0 +1,34 @@
+'' PICKUP VOXEL  offset +0.890, -1.780, -0.40
+vs 5,5,5,5,10,10,10,10      '' resume speed
+j5 110.065,228.7,0,0,0     '' VOXEL safe position
+''
+j3 110.065,228.7,-83.116,0,0     '' VOXEL safe position
+m3 49.533, 228.7, -37.230       '' move close
+vs 2,2,2,2,10,10,10,10      '' reduce speed
+m3 44.533, 228.7, -37.230   '' VOXEL pickup position
+pause 10
+m3 69.108,228.7,-20.023     '' move out +xz (slowly)
+vs 5,5,5,5,10,10,10,10      '' resume speed
+j3 110.065,228.7,8.656      '' move out +xz
+''
+pause 10
+j5 110.065,294.232,8.656,0,120 '' VOXEL safe @ 120
+m3 49.533, 228.7, -37.230       '' move close
+vs 2,2,2,2,10,10,10,10      '' reduce speed
+m3 44.533, 228.7, -37.230   '' VOXEL pickup position
+pause 10
+m3 69.108,228.7,-20.023     '' move out +xz (slowly)
+vs 5,5,5,5,10,10,10,10      '' resume speed
+j3 110.065,228.7,8.656      '' move out +xz
+''
+pause 10
+j5 110.065,163.168,8.656,0,-120 '' VOXEL safe @ -120
+m3 49.533, 228.7, -37.230       '' move close
+vs 2,2,2,2,10,10,10,10      '' reduce speed
+m3 44.533, 228.7, -37.230   '' VOXEL pickup position
+pause 10
+m3 69.108,228.7,-20.023     '' move out +xz (slowly)
+vs 5,5,5,5,10,10,10,10      '' resume speed
+j3 110.065,228.7,8.656      '' move out +xz
+''
+j5 110.065,228.7,0,0,0     '' VOXEL safe position

@@ -1,0 +1,120 @@
+END
+JawOpen: '1
+	SO, 6, 1
+	SO, 2, 1
+	SO, 3, 0
+	SO, 5, 0
+	SO, 7, 0
+	PAUSE 1
+	SO, 6, 0
+	SO, 2, 0
+	SO, 3, 0
+	SO, 5, 0
+	SO, 7, 0
+	PAUSE 1
+	RETURN
+'
+JawClose: '2
+	SO, 6, 1
+	SO, 2, 0
+	SO, 3, 1
+	SO, 5, 0
+	SO, 7, 0
+	PAUSE 1
+	SO, 6, 0
+	SO, 2, 0
+	SO, 3, 0
+	SO, 5, 0
+	SO, 7, 0
+	PAUSE 1
+	RETURN
+'
+Bolt: '3
+	SO, 6, 1
+	SO, 2, 1
+	SO, 3, 1
+	SO, 5, 0
+	SO, 7, 0
+	PAUSE 1
+	SO, 6, 0
+	SO, 2, 0
+	SO, 3, 0
+	SO, 5, 0
+	SO, 7, 0
+	PAUSE 10
+	RETURN
+'
+GripperEngage: '4
+	SO, 6, 1
+	SO, 2, 0
+	SO, 3, 0
+	SO, 5, 1
+	SO, 7, 0
+	PAUSE 1
+	SO, 6, 0
+	SO, 2, 0
+	SO, 3, 0
+	SO, 5, 0
+	SO, 7, 0
+	PAUSE 9
+	RETURN
+'
+GripperDisengage: '5
+	SO, 6, 1
+	SO, 2, 1
+	SO, 3, 0
+	SO, 5, 1
+	SO, 7, 0
+	PAUSE 1
+	SO, 6, 0
+	SO, 2, 0
+	SO, 3, 0
+	SO, 5, 0
+	SO, 7, 0
+	PAUSE 9
+	RETURN
+'
+JawFlat: '6
+	SO, 6, 1
+	SO, 2, 0
+	SO, 3, 1
+	SO, 5, 1
+	SO, 7, 0
+	PAUSE 1
+	SO, 6, 0
+	SO, 2, 0
+	SO, 3, 0
+	SO, 5, 0
+	SO, 7, 0
+	PAUSE 1
+	RETURN
+'
+JawExit: '7
+	SO, 6, 1
+	SO, 2, 1
+	SO, 3, 1
+	SO, 5, 1
+	SO, 7, 0
+	PAUSE 1
+	SO, 6, 0
+	SO, 2, 0
+	SO, 3, 0
+	SO, 5, 0
+	SO, 7, 0
+	PAUSE 1
+	RETURN
+'
+JawEnter: '8
+	SO, 6, 1
+	SO, 2, 0
+	SO, 3, 0
+	SO, 5, 0
+	SO, 7, 1
+	PAUSE 1
+	SO, 6, 0
+	SO, 2, 0
+	SO, 3, 0
+	SO, 5, 0
+	SO, 7, 0
+	PAUSE 1
+	RETURN

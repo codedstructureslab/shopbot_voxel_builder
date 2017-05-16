@@ -1,0 +1,7 @@
+'release voxel at B = -120
+SR
+m3, -50,   0, 50  ' move away in x and z
+jY, -50           ' move away in y
+SA
+'
+END

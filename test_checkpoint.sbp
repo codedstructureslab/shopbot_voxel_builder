@@ -1,0 +1,12 @@
+GOSUB CHECK_POINT
+pause 1
+GOSUB CHECK_POINT
+pause 1
+GOSUB CHECK_POINT
+pause 1
+END
+
+CHECK_POINT:
+	MSGBOX (Continue?,1,Checkpoint)
+	IF &msganswer = Cancel THEN END
+	RETURN

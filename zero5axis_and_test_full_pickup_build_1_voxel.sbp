@@ -1,0 +1,17 @@
+FP zero_build.sbp, 1,1,1,1,0 ' make sure A is past +140 deg, B past +5 deg
+''
+FP voxel_120_placement.sbp, 1,1,1,1,0
+'
+j3 -50,-50,200                     ' move away from build structure
+'j5 -746.056,-506.114,106.16,135,0  ' move to pickup zero location
+j5 -745.647,-505.715,106.16,135,0  ' new cal 20170505
+'
+z5
+FP full_pickup_test.sbp, 1,1,1,1,0
+'
+END
+'
+CHECK_POINT:
+	MSGBOX (Continue?,1,Checkpoint)
+	IF &msganswer = Cancel THEN END
+	RETURN

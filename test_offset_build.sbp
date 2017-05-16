@@ -1,0 +1,12 @@
+''M3 0,0,0
+FP, pickup_screw.sbp, 1,1,1,1,0
+FP, pickup_nut.sbp, 1,1,1,1,0
+FP, pickup_voxel_0.sbp, 1,1,1,1,0
+''
+'' transition back
+ST
+J3 -200,-200,200
+J5 -200,-200,200,0,0
+J3 -15,-15,15
+VS 2,2,2,2,10,10,10,10
+m3 0,0,0

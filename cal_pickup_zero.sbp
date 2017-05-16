@@ -1,0 +1,26 @@
+&zero_pX = -672.643
+&zero_pY = -505.531
+&zero_pZ =  105.355
+&zero_pA =  135
+&zero_pB =    0
+''
+''
+''
+''20170515 moved pickup plate flush with shopbot base plate 
+''old location:
+''&zero_pX = -745.261
+''&zero_pY = -504.897
+''&zero_pZ = 106.86
+''&zero_pA = 135
+''&zero_pB = 0
+''
+''
+''20170510 screw offset from pickup zero position by:
+''0.614,-0.818,-0.7
+''
+'' old from 5/4/17
+''&zero_pX = -746.056
+''&zero_pY = -506.114
+''&zero_pZ = 106.16
+''&zero_pA = 135
+''&zero_pB = 0

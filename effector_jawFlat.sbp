@@ -1,0 +1,15 @@
+'JawFlat: 'Program 6
+SO, 2, 0
+SO, 3, 1
+SO, 5, 1
+SO, 7, 0
+SO, 6, 1
+PAUSE 1
+SO, 6, 0
+SO, 2, 0
+SO, 3, 0
+SO, 5, 0
+SO, 7, 0
+PAUSE 1
+'
+END

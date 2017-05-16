@@ -1,0 +1,21 @@
+'
+FP, effector_jawOpen.sbp,1,1,1,1,0
+pause 1
+FP, effector_gripperEngage.sbp,1,1,1,1,0
+pause 1
+FP, effector_jawClose.sbp,1,1,1,1,0
+pause 1
+FP, effector_bolt.sbp,1,1,1,1,0
+pause 1
+FP, effector_jawOpen.sbp,1,1,1,1,0
+pause 1
+FP, effector_jawFlat.sbp,1,1,1,1,0
+pause 1
+FP, effector_jawExit.sbp,1,1,1,1,0
+pause 1
+FP, effector_jawEnter.sbp,1,1,1,1,0
+pause 1
+FP, effector_gripperDisengage.sbp,1,1,1,1,0
+pause 1
+'
+END

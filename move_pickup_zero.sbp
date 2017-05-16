@@ -1,0 +1,5 @@
+''move to pickup_zero from base table zero
+FP cal_pickup_zero.sbp,1,1,1,1,0,0,0,0,1,1
+J5 &zero_pX, &zero_pY, &zero_pZ + 50, &zero_PA, &zero_PB
+MZ &zero_pZ
+Z5

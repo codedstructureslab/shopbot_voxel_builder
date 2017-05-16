@@ -1,0 +1,272 @@
+'zero_build.sbp; modified version of 5A_XYZAB_CALIBRATION.SBP by Matt Schmitz [7/15/2015]
+'Zeroes all 5 axis of a 5-axis tool using proximity switches to CSL voxel seed 
+'SET UP ---------------------------------------------------------------------------------
+'
+'Basic Checks and Set-Up
+	SL 'clear user variables
+	SA, 'Absolute Mode
+	SF,0 'Temporarily Turn off limit checking (will return to whatever it's previous state was after file closes)
+	VN,0 'Temporarily deactivate limit switch functionality (")
+	SO,1,0 'spindle 1 off
+	SO,2,0 'Spindle 2 off
+	&modenow = %(22) 'check if we're in Preview or Move/Cut mode
+	IF &modenow = 1 then GoTo CHANGE_MODE_EXIT 'subroutine asks user to change mode and restart
+	
+'Load the my_variables file via Custom Cut 90
+	C#,90
+
+'Set Units: 
+	&units = 1 ' defaults to inches
+	IF %(25) = 1 THEN &units = 25.4 'set to mm
+
+	&SCALE = 1 'scale used for values in my_vars, that might be in inches or mm
+	IF %(25) <> &my_units THEN GOSUB Change_Scale 'if user var and sys var disagree, set special scale
+
+'Variable Initializations
+	'Move and jog speeds for this routine
+	&move_speed_XYZ = .5 * &units
+	&move_speed_AB = 10 'degrees		
+	&jog_speed_XYZ = 3 * &units
+	&jog_speed_AB = 40 'degrees
+
+	'move distances
+	&back_off_XYZ = 1 *&units
+	&big_move_XYZ = 100 * &units
+	&small_move_XYZ = &back_off_XYZ + .25 * &units 'go just past the back-off distance
+	&back_off_AB = 15 'degrees
+	&big_move_A = 180 'amount to move to hit prox switch
+	&big_move_B = 50 'ditto
+	&small_move_AB = &back_off_AB + 5 'degrees; just past back-off distance
+	
+	'Offsets from prox switches (from my_variables)
+	&X_dist = -897.1
+	&Y_dist = -551.8 
+	&Z_dist = 50  
+	&A_dist = 137.8 'degrees
+	&B_dist = 1.18  'degrees
+
+	'prox switch variables
+	&TrgtHIT = 0 'normally closed switch
+	&ABTrgtHIT = 0 'normally closed
+    &Xtrgt = 2 'input number
+    &Ytrgt = 3 ''
+    &Ztrgt = 5 ''
+	&Atrgt = 6 '' A axis sensor
+	&Btrgt = 7 '' B axis sensor
+
+	'misc
+	&calledZ = 0 'used in check_switch_status subroutines
+	&calledA = 0
+	&calledB = 0
+	&current_prox = "[unable to determine]" 'used to inform user which prox switch is currently activated
+	&current_axis = "[unable to determine]" 'used for Failed_Contact_Exit routine to inform user which axis didn't make contact
+	&ResetZ = no 'either yes or no; default = no
+
+    'new voxel zero offset locations from zero program
+	&X_voxel_zero = -255.275 ''20170503 (-.205,-.409,0)
+	&Y_voxel_zero = -465.251 
+    &Z_voxel_zero =  481.000
+
+'Set Move and Jog Speeds
+VS,&move_speed_XYZ,&move_speed_XYZ,&move_speed_AB,&move_speed_AB,&jog_speed_XYZ,&jog_speed_XYZ,&jog_speed_AB,&jog_speed_AB 
+
+'Ask user if they want to reset their Z position
+	GOSUB AskToResetZ 'sets variable &reset_z to either yes or no
+	
+'Check if prox switches are already being triggered and moves off them or prompts user to do so
+Check_Switch_Status:
+    IF %(52) = 0 THEN GOTO GetoffproxX	'input 2, X
+    IF %(53) = 0 THEN GOTO GetoffproxY	'input 3, Y	
+    IF %(55) = 0 THEN GOTO GetoffproxZ	'input 5, Z
+	IF %(56) = 0 THEN GOTO GetoffproxA	'input 6, A
+    IF %(57) = 0 THEN GOTO GetoffproxB	'input 7, B
+
+'MOVEMENT ----------------------------------------------------------------------
+
+'Zero Axis in order: 
+	GOSUB Zero_Z
+	Restart_Zero_B:	'this label is here in case you need to restart zeroing the b
+	GOSUB Zero_B
+	GOSUB Zero_A
+	GOSUB Zero_Y
+	GOSUB Zero_X
+	
+'Tidy up (resets move/jog speedS)
+	GOSUB Tidy_Up
+	GOSUB Set_Voxel_Zero
+	GOSUB Completion_Message
+
+ 'End program (prevents it from dropping through subroutines)	
+	END	
+
+'SUBROUTINES ---------------------------------------------------------------------------
+
+Zero_Z: 
+	ON INP(&Ztrgt,&TrgtHIT) GOTO Zcontact 'z prox  
+    JZ, %(3) + &big_move_XYZ
+	&current_axis = Z
+	GOTO Failed_Contact_Exit 'if you make it here, you didn't contact anything
+	Zcontact: 'This is our subroutine for action after hitting the prox switch
+	    JZ, %(3) - &back_off_XYZ 'Move back out for another pass
+	    ON INP(&Ztrgt,&TrgtHIT) GOTO Zagain
+	    MZ, %(3) + &small_move_XYZ 'move back toward switch
+		&current_axis = Z
+		GOTO Failed_Contact_Exit 'if you make it here, you didn't contact anything
+		Zagain:
+			If &reset_Z = yes THEN VA,,,&Z_dist,,,,, 'Set real position 
+			VA,,,,,,,,0 'zero table base coordinates
+			JZ, %(3) - &back_off_XYZ 'Jog to back-off position (don't jog to zero as this may be very low and we don't want to run into anything
+	RETURN       
+
+Zero_B:
+	ON INP(&Btrgt,&ABTrgtHIT) GOTO Bcontact 'b prox
+    JB, %(5) - &big_move_B
+	'if you make it here, you didn't contact anything
+	GOSUB Failed_Contact_B
+	Bcontact: 'This is our subroutine for action after hitting the prox switch
+	    JB, %(5) + &back_off_AB 'Move back out for another pass
+	    ON INP(&Btrgt,&TrgtHIT) GOTO Bagain
+	    MB, %(5) - &small_move_AB 'move back toward switch
+		&current_axis = B
+		GOTO Failed_Contact_Exit 'if you make it here, you didn't contact anything
+		Bagain:
+			VA,,,,,&B_dist,,,,,0 'Set real position and Zero Table Base Coordinates
+			JB, 0 'Jog to zero location
+	RETURN  
+
+Zero_A:
+	ON INP(&Atrgt,&ABTrgtHIT) GOTO Acontact 'a prox
+    JA, %(4) - &big_move_A
+	&current_axis = A
+	GOTO Failed_Contact_Exit 'if you make it here, you didn't contact anything
+	Acontact: 'This is our subroutine for action after hitting the prox switch
+	    JA, %(4) + &back_off_AB 'Move back out for another pass
+	    ON INP(&Atrgt,&TrgtHIT) GOTO GoHere
+	    MA, %(4) - &small_move_AB 'move back toward switch
+		&current_axis = A
+		GOTO Failed_Contact_Exit 'if you make it here, you didn't contact anything
+		GoHere:
+	RETURN     
+
+Zero_Y:
+	ON INP(&Ytrgt,&TrgtHIT) GOTO Ycontact 'y prox
+    JY, %(2) - &big_move_XYZ
+	&current_axis = Y
+	GOTO Failed_Contact_Exit 'if you make it here, you didn't contact anything
+	Ycontact: 'This is our subroutine for action after hitting the prox switch
+	    JY, %(2) + &back_off_XYZ 'Move back out for another pass
+	    ON INP(&Ytrgt,&TrgtHIT) GOTO Yagain
+	    MY, %(2) - &small_move_XYZ 'move back toward switch
+		&current_axis = Y
+		GOTO Failed_Contact_Exit 'if you make it here, you didn't contact anything
+		Yagain:
+			VA,,&Y_dist,,,,,0 'Set real position and Zero Table Base Coordinates
+			JY, 0 'Jog to zero location
+			VA,,,,&A_dist,,,,,0 'Set real position and Zero Table Base Coordinates
+			JA, 0 'Jog to zero location
+	RETURN    
+
+Zero_X:
+	ON INP(&Xtrgt,&TrgtHIT) GOTO Xcontact 'x prox
+    JX, %(1) - &big_move_XYZ
+	&current_axis = X
+	GOTO Failed_Contact_Exit 'if you make it here, you didn't contact anything
+	Xcontact: 'This is our subroutine for action after hitting the prox switch
+	    JX, %(1) + &back_off_XYZ 'Move back out for another pass
+	    ON INP(&Xtrgt,&TrgtHIT) GOTO Xagain
+	    MX, %(1) - &small_move_XYZ 'move back toward switch
+		&current_axis = X
+		GOTO Failed_Contact_Exit 'if you make it here, you didn't contact anything
+		Xagain:
+			VA,&X_dist,,,,,0 'Set real position and Zero Table Base Coordinates
+			JX, 0 'Jog to zero location
+	RETURN                                       
+
+Change_Scale:
+	MSGBOX (You are using different units (inches/mm) than those used when your xy home position was set. Do you wish to proceed? (Note: The xy home position is set in [T]ools - [S]hopbot Setup. If this is your first time running this routine you may wish to first run that command)., OKCancel, Unit Discrepency)
+	IF %(25) = 1 THEN &SCALE = 25.4
+	IF %(25) = 0 THEN &SCALE = 0.03937
+	RETURN
+
+GetoffproxX:
+	&current_prox = X
+	GOTO Getoffproxmessage
+
+GetoffproxY:
+	&current_prox = Y
+	GOTO Getoffproxmessage
+
+GetoffproxZ:
+	&current_prox = Z
+	IF &calledZ = 1 THEN GOTO Getoffproxmessage
+	&calledZ = 1
+	MZ, %(3) - &back_off_XYZ
+	GOTO Check_Switch_Status
+
+GetoffproxA:
+	&current_prox = A
+	IF &calledA = 1 THEN GOTO Getoffproxmessage
+	&calledA = 1
+	JA, %(4) + &back_off_AB
+	GOTO Check_Switch_Status
+
+GetoffproxB:
+	&current_prox = B
+	IF &calledB = 1 THEN GOTO Getoffproxmessage
+	&calledB = 1
+	JB, %(5) + &back_off_AB
+	GOTO Check_Switch_Status
+
+Getoffproxmessage:
+	MSGBOX (The &current_prox axis proximity switch is currently activated. Click OKAY to open keypad and move off the proximity switch. Once clear close the keypad to continue., 49, Prox Switch On!)
+	IF &msganswer = Cancel THEN END
+	SK  
+	GOTO Check_Switch_Status 'Go Back to Re-check Status
+
+AskToResetZ:
+	MSGBOX(YES: Will zero the Z axis to where you last used your z-zero plate.                           NO: The z-zero location will remain unchanged.,yesno,Do You Wish To Reset Your Z-Zero Location?  )
+	&reset_z = &msganswer 'either yes or no       
+	RETURN     
+
+Failed_Contact_B:
+	ON INP(&Btrgt,&ABTrgtHIT) 'deactivate on input trigger
+	MSGBOX (Failed to contact the B axis proximity switch in the expected distance. Click OKAY to open the keypad and rotate the B-axis so that the spindle is pointing straight down (Hold down the shift key and press PgUp and PgDn to move the B-Axis). Close the keypad when ready to continue., 49, Error)
+	IF &msganswer = Cancel THEN END
+	SK  
+	IF %(57) = 0 THEN GOTO GetoffproxB	'check to see if they're sitting on input input 7, B
+	GOTO Restart_Zero_B 'tries again to zero the b axis
+
+Tidy_Up:
+	'wraps up any loose ends before exiting/completion of program
+	'nothing being done currently
+	RETURN
+
+Completion_Message:
+	MSGBOX(All axes are now zeroed., okonly, Routine Complete)     
+	RETURN 
+
+Change_Mode_EXIT:
+	'You are in Preview mode - please switch to Move/Cut mode and retry.
+    PAUSE 
+	END         
+
+Failed_Contact_Exit:
+	GOSUB Tidy_Up
+	MSGBOX(The &current_axis axis failed to make contact with a proximity switch in the expected distance.,exclamation, Aborting)
+	END
+
+Set_Voxel_Zero:
+	VA,&X_voxel_zero,&Y_voxel_zero,&Z_voxel_zero,0,0,0,0,0,0,0 '' also resets zero table axes
+	&lxlim = -750
+	&hxlim = 100
+	&lylim = -525
+	&hylim = 100
+	&lzlim = -85
+	&hzlim = 400
+	&lalim = -300
+	&halim = 300
+	&lblim = -160
+	&hblim = 160
+	VL,&lxlim,&hxlim,&lylim,&hylim,&lzlim,&hzlim,&lalim,&halim,1,&lblim,&hblim,5 'table limits set based on table zero at seed voxel
+	RETURN
+	

@@ -1,0 +1,24 @@
+'' PICKUP NUT '' 20170516: integrate nut loading
+&x_pickup_nut =   8.415    '' recalibration after moving pickup baseplate 20170515
+&y_pickup_nut = 100.000
+&z_pickup_nut = -63.200
+''
+''
+&x_offset = 0
+&y_offset = 0
+&z_offset = 0
+''
+FP, load_nextNut.sbp,1,1,1,1,0        '' prepare next nut
+vs 5,5,5,5,20,20,20,20      '' resume speed
+j3 &x_pickup_nut + 50 + &x_offset, &y_pickup_nut + &y_offset, &z_pickup_nut + 50 + &z_offset     '' move to safe nut position
+'' close and open jaw
+FP, effector_jawClose.sbp,1,1,1,1,0
+FP, effector_jawOpen.sbp,1,1,1,1,0
+m3 &x_pickup_nut +  3 + &x_offset, &y_pickup_nut + &y_offset, &z_pickup_nut +  3 + &z_offset     '' move to closer safe nut position
+vs 2,2,2,2,10,10,10,10      '' reduce speed
+m3 &x_pickup_nut + &x_offset, &y_pickup_nut + &y_offset, &z_pickup_nut + &z_offset               '' nut pickup position
+pause 0.5
+m3 &x_pickup_nut +  3 + &x_offset, &y_pickup_nut + &y_offset, &z_pickup_nut +  3 + &z_offset     '' move to closer safe nut position
+vs 5,5,5,5,20,20,20,20      '' resume speed
+m3 &x_pickup_nut + 50 + &x_offset, &y_pickup_nut + &y_offset, &z_pickup_nut + 50 + &z_offset     '' move to safe nut position
+END
