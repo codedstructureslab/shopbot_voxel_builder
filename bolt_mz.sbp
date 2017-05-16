@@ -1,7 +1,0 @@
-FP, effector_control.sbp,1,1,1,1,0
-
-M3 0,0,0
-GOSUB Bolt
-'GOSUB GripperDisengage
-'GOSUB JawOpen
-'FP, release_vox_0.sbp,1,1,1,1,0

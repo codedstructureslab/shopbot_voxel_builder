@@ -1,0 +1,6 @@
+''Ok to bolt mz?
+PAUSE
+FP, effector_jawClose.sbp,1,1,1,1,0
+FP, effector_bolt.sbp,1,1,1,1,0
+FP, effector_jawEnter.sbp,1,1,1,1,0
+END
