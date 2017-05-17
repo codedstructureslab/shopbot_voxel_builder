@@ -23,7 +23,7 @@ FP, release_vox_0.sbp, 1,1,1,1,0
 ''
 '' GOTO FEED ----------------------
 FEED1:
-GOSUB GOTO_FEED
+GOSUB goFeed
 ''
 MOVE_BOLT_MX:
 FP, effector_jawEnter.sbp,1,1,1,1,0
@@ -44,7 +44,7 @@ FP, release_vox_m120.sbp, 1,1,1,1,0
 ''
 '' GOTO FEED ----------------------
 FEED2:
-GOSUB GOTO_FEED
+GOSUB goFeed
 ''
 MOVE_BOLT_MY:
 FP, effector_jawEnter.sbp,1,1,1,1,0
@@ -66,7 +66,7 @@ jb 0
 '
 END
 ''
-GOTO_FEED:
+goFeed:
     j5 -130,-300,170,0,0
     FP, effector_jawOpen.sbp,1,1,1,1,0
     ''Finished screw/nut feed?
