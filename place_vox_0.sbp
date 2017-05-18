@@ -1,0 +1,29 @@
+''PLACE_VOX_0.sbp '' places voxel with B axis = 0 deg
+''
+'' test current_vox position is valid; limits set in zero_build.sbp; current voxel position should be set by calling script
+''
+''xlim is out of range
+IF &current_vox_x < &lxlim OR &current_vox_x > &hxlim THEN PAUSE
+''ylim is out of range
+IF &current_vox_y < &lylim OR &current_vox_y > &hylim THEN PAUSE
+''zlim is out of range
+IF &current_vox_z < &lzlim OR &current_vox_z > &hzlim THEN PAUSE
+''alim is out of range
+IF &current_vox_a < &lalim OR &current_vox_a > &halim THEN PAUSE
+''blim is out of range
+IF &current_vox_b < &lblim OR &current_vox_b > &hblim THEN PAUSE
+''
+''
+j3 &current_vox_x -50, &current_vox_y -50, &current_vox_z +50
+j3 &current_vox_x -15, &current_vox_y -15, &current_vox_z +30
+j3 &current_vox_x -10, &current_vox_y -10, &current_vox_z +10
+m3 &current_vox_x, &current_vox_y, &current_vox_z
+''
+END
+''
+'' old routine for placing voxel from shopbot_base_programs.py
+'M5 """ + str(-75+dx) + """, """ + str(-75+dy) + """, """ + str(75+dz) + """, 0, 0
+'M5 """ + str(-30+dx) + """, """ + str(-30+dy) + """, """ + str(24+dz) + """, 0, 0
+'M5 """ + str(-15+dx) + """, """ + str(-15+dy) + """, """ + str(3+dz) + """, 0, 0
+'M5 """ + str(dx) + " , " + str(dy) + ", " + str(dz) + """, 0, 0
+'PAUSE 0.5
