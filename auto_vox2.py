@@ -366,7 +366,7 @@ def shp_reload_voxel():
     shp_reload()  # TODO: remove once pickup is ready...
     # print "''"
     # print 'PRINT %(147)'  # print timing using shopbot
-    # print 'RELOAD_VOXEL_SCREW_NUT:'
+    # print 'PRINT "RELOAD_VOXEL_SCREW_NUT"'
     # shp_move_pickup_loc()
     # shp_pickup_screw()
     # shp_pickup_nut()
@@ -378,7 +378,7 @@ def shp_reload_bolts():
     shp_reload()  # TODO: remove once pickup is ready...
     # print "''"
     # print 'PRINT %(147)'  # print timing using shopbot
-    # print 'RELOAD_SCREW_NUT:'
+    # print 'PRINT "RELOAD_SCREW_NUT"'
     # shp_move_pickup_loc()
     # shp_pickup_screw()
     # shp_pickup_nut()
@@ -387,7 +387,7 @@ def shp_reload_bolts():
 
 def shp_reload():  # old location where people can manually reload
     print "''"
-    print "RELOAD_PAUSE:"
+    print 'PRINT "RELOAD_PAUSE"'
     print 'J5 -130,-300,170,0,0'
     print 'FP, effector_jawOpen.sbp,1,1,1,1,0'
     print "''Finished screw/nut feed?"
@@ -402,6 +402,7 @@ def shp_set_vox_pos(x,y,z):
 def shp_place_vox_x(vox_num):
     print "''"
     print 'PRINT %(147)'  # print timing using shopbot
+    print 'PRINT "PLACE_VOXEL_X_' + str(vox_num) + ':"'
     print 'PLACE_VOXEL_X_' + str(vox_num) + ':'
     print 'FP, place_vox_m120.sbp,1,1,1,1,0'
     print 'FP, bolt.sbp,1,1,1,1,0'
@@ -416,6 +417,7 @@ def shp_place_vox_x(vox_num):
 def shp_place_vox_y(vox_num):
     print "''"
     print 'PRINT %(147)'  # print timing using shopbot
+    print 'PRINT "PLACE_VOXEL_Y_' + str(vox_num) + ':"'
     print 'PLACE_VOXEL_Y_' + str(vox_num) + ':'
     print 'FP, place_vox_p120.sbp,1,1,1,1,0'
     print 'FP, bolt.sbp,1,1,1,1,0'
@@ -430,6 +432,7 @@ def shp_place_vox_y(vox_num):
 def shp_place_vox_z(vox_num):
     print "''"
     print 'PRINT %(147)'  # print timing using shopbot
+    print 'PRINT "PLACE_VOXEL_Z_' + str(vox_num) + ':"'
     print 'PLACE_VOXEL_Z_' + str(vox_num) + ':'
     print 'FP, place_vox_0.sbp,1,1,1,1,0'
     print 'FP, bolt.sbp,1,1,1,1,0'
@@ -445,6 +448,7 @@ def shp_place_vox_z(vox_num):
 def shp_attach_x(vox_num):
     print "''"
     print 'PRINT %(147)'  # print timing using shopbot
+    print 'PRINT "ATTACH_X_' + str(vox_num) + ':"'
     print 'ATTACH_X_' + str(vox_num) + ':'
     shp_reload_bolts()
     print 'MOVE_BOLT_MX:'
@@ -462,6 +466,7 @@ def shp_attach_x(vox_num):
 def shp_attach_y(vox_num):
     print "''"
     print 'PRINT %(147)'  # print timing using shopbot
+    print 'PRINT "ATTACH_Y_' + str(vox_num) + ':"'
     print 'ATTACH_Y_' + str(vox_num) + ':'
     shp_reload_bolts()
     print 'MOVE_BOLT_MY:'
@@ -478,6 +483,7 @@ def shp_attach_y(vox_num):
 
 def shp_attach_z(vox_num):  # not used as it's typically the first attachment made
     print 'PRINT %(147)'  # print timing using shopbot
+    print 'PRINT "ATTACH_Z_' + str(vox_num) + ':"'
     print 'ATTACH_Z_' + str(vox_num) + ':'
     shp_reload_bolts()
     print 'MOVE_BOLT_MZ:'
