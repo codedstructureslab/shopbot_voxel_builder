@@ -12,7 +12,7 @@ J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
-PRINT "NEXT VOXEL: 8 at [0.0, 0.0, 0.0] <-------------------------- VOXEL"
+PRINT "NEXT VOXEL: 8 at [0.0 0.0 0.0] <-------------------------- VOXEL"
 &current_vox_x = 0.0
 &current_vox_y = 0.0
 &current_vox_z = 0.0

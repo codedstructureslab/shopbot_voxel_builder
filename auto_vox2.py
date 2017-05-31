@@ -291,7 +291,7 @@ def output_shopbot_build(voxMatrix):
     for num, each in enumerate([i for sublist in build for i in sublist]):
         shp_reload_voxel()
         # setting voxel location in shopbot
-        print 'PRINT "NEXT VOXEL: ' + str(vox[each].id) + ' at ' + str(vox[each].center) + ' <-------------------------- VOXEL"'
+        print 'PRINT "NEXT VOXEL: ' + str(vox[each].id) + ' at ' + str(vox[each].center).replace(',', '') + ' <-------------------------- VOXEL"'
         shp_set_vox_pos(vox[each].center[0],vox[each].center[1],vox[each].center[2])
         xyz_flag = [0,0,0]
         print "''"
