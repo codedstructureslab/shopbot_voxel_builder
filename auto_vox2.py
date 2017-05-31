@@ -17,7 +17,7 @@ import matplotlib.pylab as plt           # working with plots
 from mpl_toolkits.mplot3d import Axes3D  # working in 3d
 import numpy as np                       # working with matrixes
 import copy                              # working with copies of lists
-import shopbot_base_programs as sbp      # working with SHOPBOT
+# import shopbot_base_programs as sbp      # working with SHOPBOT
 import Tkinter as tk                     # working with GUI
 import tkFileDialog                      # working with file browser
 import tkMessageBox                      # working with message boxes
@@ -46,7 +46,7 @@ def main():
     global seeded_num
     
     plot_cuboct_flag = True
-    seeded_num = 2         # number of layers seeded; typically 2
+    seeded_num = 3         # number of layers seeded; typically 2
     
     # setup
     setup_vox_geometry()   # sets voxel geometry
@@ -363,24 +363,26 @@ def shp_pickup_voxel():
     
     
 def shp_reload_voxel():
-    print "''"
-    print 'PRINT %(147)'  # print timing using shopbot
-    print 'RELOAD_VOXEL_SCREW_NUT:'
-    shp_move_pickup_loc()
-    shp_pickup_screw()
-    shp_pickup_nut()
-    shp_pickup_voxel()
-    print 'ST'
+    shp_reload()  # TODO: remove once pickup is ready...
+    # print "''"
+    # print 'PRINT %(147)'  # print timing using shopbot
+    # print 'RELOAD_VOXEL_SCREW_NUT:'
+    # shp_move_pickup_loc()
+    # shp_pickup_screw()
+    # shp_pickup_nut()
+    # shp_pickup_voxel()
+    # print 'ST'
 
     
 def shp_reload_bolts():
-    print "''"
-    print 'PRINT %(147)'  # print timing using shopbot
-    print 'RELOAD_SCREW_NUT:'
-    shp_move_pickup_loc()
-    shp_pickup_screw()
-    shp_pickup_nut()
-    print 'ST'
+    shp_reload()  # TODO: remove once pickup is ready...
+    # print "''"
+    # print 'PRINT %(147)'  # print timing using shopbot
+    # print 'RELOAD_SCREW_NUT:'
+    # shp_move_pickup_loc()
+    # shp_pickup_screw()
+    # shp_pickup_nut()
+    # print 'ST'
 
 
 def shp_reload():  # old location where people can manually reload
