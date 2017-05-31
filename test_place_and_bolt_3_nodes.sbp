@@ -44,7 +44,7 @@ GOSUB goFeed
 MOVE_BOLT_MY:
 FP, effector_jawEnter.sbp,1,1,1,1,0
 ''
-FP, place_vox_120.sbp,1,1,1,1,0
+FP, place_vox_p120.sbp,1,1,1,1,0
 ''Ok to bolt my
 FP, bolt.sbp,1,1,1,1,0
 ''
