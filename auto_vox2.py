@@ -393,7 +393,7 @@ def shp_reload():  # old location where people can manually reload
     print 'J5 -130,-300,170,0,0'
     print 'FP, effector_jawOpen.sbp,1,1,1,1,0'
     print 'MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )'
-    print 'IF &msganswer = 1 THEN FP, effector_gripperEngage.sbp,1,1,1,1,0'
+    print 'IF &MSGANSWER = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0'
     print "''Finished screw/nut feed?"
     print 'PAUSE'
     
