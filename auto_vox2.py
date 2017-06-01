@@ -3,8 +3,6 @@
 TODO:
 - remove redundancy; id_matrix creation
 - troubleshoot MatplotDeprecation warning
-- look into timing function shopbot code to output time when things are placed
-- put in constraint, b-axis cannot move when gripper is engaged
 - put in check to ensure every vox has at least one attachment
 - consider making a voxel definition gui
 
@@ -45,14 +43,16 @@ def main():
     global plot_cuboct_flag
     global seeded_num
     
-    plot_cuboct_flag = True
-    seeded_num = 3         # number of layers seeded; typically 2
+    # user inputs
+    seeded_num = 3                     # number of layers seeded; typically 2
+    show_vox_build_flag = False        # shows plot of vox build 
+    output_shopbot_build_flag = True   # outputs shopbot build
+    plot_cuboct_flag = True            # shows full cuboct lattice on plot
     
     # setup
     setup_vox_geometry()   # sets voxel geometry
     setup_shopbot_table()  # sets table offset and coordinate transformation
-    
-    plt.ion()  # interactive plotting; used so plt.pause will work
+    plt.ion()              # interactive plotting; used so plt.pause will work
     
     # sample voxel structures ------------------------------------------------------
     v2x2 = np.ones((2,2,2))    # 3d square 2x2 voxel matrix (z,y,x)
@@ -77,12 +77,14 @@ def main():
     v2x2_seeded7 = seeded7(v2x2)
     # -------------------------------------------------------------------------------
     
-    # input structure is for visualization only, actual build output assumes seeded (see code below)
-    input_vox_structure = v2x2
+    # input structure note: seeded is for visualization, build output assumes seeded_num (see code below)
+    input_vox_structure = v2x2  # <-------------------------- USER INPUT
     
     # print input_vox_structure
-    #show_vox_build(input_vox_structure)
-    output_shopbot_build(input_vox_structure)
+    if show_vox_build_flag:
+        show_vox_build(input_vox_structure)
+    if output_shopbot_build_flag:
+        output_shopbot_build(input_vox_structure)
     
     plt.ioff()
     plt.show()
@@ -444,7 +446,6 @@ def shp_place_vox_z(vox_num):
     print 'FP, release_vox_0.sbp, 1,1,1,1,0'
 
    
-   
 def shp_attach_x(vox_num):
     print "''"
     print 'PRINT %(147)'  # print timing using shopbot
@@ -525,7 +526,7 @@ def get_neighbor(id_matrix):
     
 def buildorder(voxMatrix):
     x,y,z = [np.size(voxMatrix,0), np.size(voxMatrix,1), np.size(voxMatrix,2)]   # extracting voxMatrix dimensions
-    id_matrix = np.array([i+1 for i in range(x*y*z)]).reshape((x,y,z))  # creating vox matrix with id
+    id_matrix = np.array([i+1 for i in range(x*y*z)]).reshape((x,y,z))           # creating vox matrix with id
     neighbor = get_neighbor(id_matrix)  # getting neighbor info for knowing where attachments are made
     
     buildsteps = [[] for i in range(x+y+z-2)]
