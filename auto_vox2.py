@@ -45,7 +45,7 @@ def main():
     
     # user inputs
     seeded_num = 2                     # number of layers seeded; typically 2
-    show_vox_build_flag = False        # shows plot of vox build 
+    show_vox_build_flag = True         # shows plot of vox build 
     output_shopbot_build_flag = True   # outputs shopbot build
     plot_cuboct_flag = True            # shows full cuboct lattice on plot
     
@@ -78,7 +78,7 @@ def main():
     # -------------------------------------------------------------------------------
     
     # input structure note: seeded is for visualization, build output assumes seeded_num (see code below)
-    input_vox_structure = v2x2  # <-------------------------- USER INPUT
+    input_vox_structure = v2x2_seeded  # <-------------------------- USER INPUT
     
     # print input_vox_structure
     if show_vox_build_flag:
@@ -408,21 +408,6 @@ def shp_place_vox_x(vox_num):
     print 'PRINT %(147)'  # print timing using shopbot
     print 'PRINT "PLACE_VOXEL_X_' + str(vox_num) + ':"'
     print 'PLACE_VOXEL_X_' + str(vox_num) + ':'
-    print 'FP, place_vox_m120.sbp,1,1,1,1,0'
-    print 'FP, bolt.sbp,1,1,1,1,0'
-    print 'FP, effector_jawOpen.sbp,1,1,1,1,0'
-    print 'FP, effector_gripperDisengage.sbp,1,1,1,1,0'
-    print 'MOVE_OUT_' + str(vox_num) + ':'
-    print "''Ok to move out Baxis@-120?"
-    print 'PAUSE'
-    print 'FP, release_vox_m120.sbp, 1,1,1,1,0'
-
-    
-def shp_place_vox_y(vox_num):
-    print "''"
-    print 'PRINT %(147)'  # print timing using shopbot
-    print 'PRINT "PLACE_VOXEL_Y_' + str(vox_num) + ':"'
-    print 'PLACE_VOXEL_Y_' + str(vox_num) + ':'
     print 'FP, place_vox_p120.sbp,1,1,1,1,0'
     print 'FP, bolt.sbp,1,1,1,1,0'
     print 'FP, effector_jawOpen.sbp,1,1,1,1,0'
@@ -431,6 +416,21 @@ def shp_place_vox_y(vox_num):
     print "''Ok to move out Baxis@+120?"
     print 'PAUSE'
     print 'FP, release_vox_p120.sbp, 1,1,1,1,0'
+
+    
+def shp_place_vox_y(vox_num):
+    print "''"
+    print 'PRINT %(147)'  # print timing using shopbot
+    print 'PRINT "PLACE_VOXEL_Y_' + str(vox_num) + ':"'
+    print 'PLACE_VOXEL_Y_' + str(vox_num) + ':'
+    print 'FP, place_vox_m120.sbp,1,1,1,1,0'
+    print 'FP, bolt.sbp,1,1,1,1,0'
+    print 'FP, effector_jawOpen.sbp,1,1,1,1,0'
+    print 'FP, effector_gripperDisengage.sbp,1,1,1,1,0'
+    print 'MOVE_OUT_' + str(vox_num) + ':'
+    print "''Ok to move out Baxis@-120?"
+    print 'PAUSE'
+    print 'FP, release_vox_m120.sbp, 1,1,1,1,0'
 
     
 def shp_place_vox_z(vox_num):
@@ -454,16 +454,16 @@ def shp_attach_x(vox_num):
     print 'PRINT "ATTACH_X_' + str(vox_num) + ':"'
     print 'ATTACH_X_' + str(vox_num) + ':'
     shp_reload_bolts()
-    print 'MOVE_BOLT_MX:'
+    print 'MOVE_BOLT_PX:'
     print 'FP, effector_jawEnter.sbp,1,1,1,1,0'
-    print 'FP, place_vox_m120.sbp,1,1,1,1,0'
-    print "''Ok to bolt mx?"
+    print 'FP, place_vox_p120.sbp,1,1,1,1,0'
+    print "''Ok to bolt px?"
     print 'FP, bolt.sbp,1,1,1,1,0'
     print "''"
-    print 'MOVE_OUT_m120_' + str(vox_num) + ':'
-    print "''Ok to move out B@-120?"
+    print 'MOVE_OUT_p120_' + str(vox_num) + ':'
+    print "''Ok to move out B@+120?"
     print 'PAUSE'
-    print 'FP, release_vox_m120.sbp, 1,1,1,1,0'
+    print 'FP, release_vox_p120.sbp, 1,1,1,1,0'
 
 
 def shp_attach_y(vox_num):
@@ -472,16 +472,16 @@ def shp_attach_y(vox_num):
     print 'PRINT "ATTACH_Y_' + str(vox_num) + ':"'
     print 'ATTACH_Y_' + str(vox_num) + ':'
     shp_reload_bolts()
-    print 'MOVE_BOLT_MY:'
+    print 'MOVE_BOLT_PY:'
     print 'FP, effector_jawEnter.sbp,1,1,1,1,0'
-    print 'FP, place_vox_p120.sbp,1,1,1,1,0'
-    print "''Ok to bolt my?"
+    print 'FP, place_vox_m120.sbp,1,1,1,1,0'
+    print "''Ok to bolt py?"
     print 'FP, bolt.sbp,1,1,1,1,0'
     print "''"
-    print 'MOVE_OUT_p120_' + str(vox_num) + ':'
-    print "''Ok to move out B@+120?"
+    print 'MOVE_OUT_m120_' + str(vox_num) + ':'
+    print "''Ok to move out B@-120?"
     print 'PAUSE'
-    print 'FP, release_vox_p120.sbp, 1,1,1,1,0'
+    print 'FP, release_vox_m120.sbp, 1,1,1,1,0'
     
 
 def shp_attach_z(vox_num):  # not used as it's typically the first attachment made
