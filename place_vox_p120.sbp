@@ -1,17 +1,19 @@
 ''PLACE_VOX_m120.sbp '' places voxel with B axis = 120 deg
 ''
-'' test current_vox position is valid; limits set in zero_build.sbp; current voxel position should be set by calling script
+'' test current_vox position is valid; 
+'' limits set in zero_build.sbp; 
+'' current voxel position should be set by calling script
 ''
 ''xlim is out of range
-IF &current_vox_x < &lxlim OR &current_vox_x > &hxlim THEN PAUSE
+''IF &current_vox_x < &lxlim OR &current_vox_x > &hxlim THEN PAUSE
 ''ylim is out of range
-IF &current_vox_y < &lylim OR &current_vox_y > &hylim THEN PAUSE
+''IF &current_vox_y < &lylim OR &current_vox_y > &hylim THEN PAUSE
 ''zlim is out of range
-IF &current_vox_z < &lzlim OR &current_vox_z > &hzlim THEN PAUSE
+''IF &current_vox_z < &lzlim OR &current_vox_z > &hzlim THEN PAUSE
 ''alim is out of range
-IF &current_vox_a < &lalim OR &current_vox_a > &halim THEN PAUSE
+''IF &current_vox_a < &lalim OR &current_vox_a > &halim THEN PAUSE
 ''blim is out of range
-IF &current_vox_b < &lblim OR &current_vox_b > &hblim THEN PAUSE
+''IF &current_vox_b < &lblim OR &current_vox_b > &hblim THEN PAUSE
 ''
 ''
 j5 &current_vox_x + 0, &current_vox_y -50, &current_vox_z +50, 0, 120
