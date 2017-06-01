@@ -7,9 +7,11 @@ PRINT %(146); " "; %(147)
 ''Voxel size [in.] [3.0, 3.0, 3.0] 
 ''
 ''
-RELOAD_PAUSE:
+PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
+MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
+IF &msganswer = 1 THEN FP, effector_gripperDisengage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 PRINT "NEXT VOXEL: 4 at [0.0 0.0 -76.2] <-------------------------- VOXEL"
@@ -21,6 +23,7 @@ PRINT "ATTACH voxel: 4 to 2 at -y"
 PRINT "ATTACH voxel: 4 to 3 at -x"
 ''
 PRINT %(147)
+PRINT "PLACE_VOXEL_Y_4:"
 PLACE_VOXEL_Y_4:
 FP, place_vox_p120.sbp,1,1,1,1,0
 FP, bolt.sbp,1,1,1,1,0
@@ -32,11 +35,14 @@ PAUSE
 FP, release_vox_p120.sbp, 1,1,1,1,0
 ''
 PRINT %(147)
+PRINT "ATTACH_X_4:"
 ATTACH_X_4:
 ''
-RELOAD_PAUSE:
+PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
+MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
+IF &msganswer = 1 THEN FP, effector_gripperDisengage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 MOVE_BOLT_MX:
@@ -50,9 +56,11 @@ MOVE_OUT_m120_4:
 PAUSE
 FP, release_vox_m120.sbp, 1,1,1,1,0
 ''
-RELOAD_PAUSE:
+PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
+MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
+IF &msganswer = 1 THEN FP, effector_gripperDisengage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 PRINT "NEXT VOXEL: 7 at [76.2 0.0 0.0] <-------------------------- VOXEL"
@@ -64,6 +72,7 @@ PRINT "ATTACH voxel: 7 to 3 at -z"
 PRINT "ATTACH voxel: 7 to 5 at -y"
 ''
 PRINT %(147)
+PRINT "PLACE_VOXEL_Z_7:"
 PLACE_VOXEL_Z_7:
 FP, place_vox_0.sbp,1,1,1,1,0
 FP, bolt.sbp,1,1,1,1,0
@@ -75,11 +84,14 @@ PAUSE
 FP, release_vox_0.sbp, 1,1,1,1,0
 ''
 PRINT %(147)
+PRINT "ATTACH_Y_7:"
 ATTACH_Y_7:
 ''
-RELOAD_PAUSE:
+PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
+MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
+IF &msganswer = 1 THEN FP, effector_gripperDisengage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 MOVE_BOLT_MY:
@@ -93,9 +105,11 @@ MOVE_OUT_p120_7:
 PAUSE
 FP, release_vox_p120.sbp, 1,1,1,1,0
 ''
-RELOAD_PAUSE:
+PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
+MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
+IF &msganswer = 1 THEN FP, effector_gripperDisengage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 PRINT "NEXT VOXEL: 6 at [0.0 76.2 0.0] <-------------------------- VOXEL"
@@ -107,6 +121,7 @@ PRINT "ATTACH voxel: 6 to 2 at -z"
 PRINT "ATTACH voxel: 6 to 5 at -x"
 ''
 PRINT %(147)
+PRINT "PLACE_VOXEL_Z_6:"
 PLACE_VOXEL_Z_6:
 FP, place_vox_0.sbp,1,1,1,1,0
 FP, bolt.sbp,1,1,1,1,0
@@ -118,11 +133,14 @@ PAUSE
 FP, release_vox_0.sbp, 1,1,1,1,0
 ''
 PRINT %(147)
+PRINT "ATTACH_X_6:"
 ATTACH_X_6:
 ''
-RELOAD_PAUSE:
+PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
+MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
+IF &msganswer = 1 THEN FP, effector_gripperDisengage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 MOVE_BOLT_MX:
@@ -136,9 +154,11 @@ MOVE_OUT_m120_6:
 PAUSE
 FP, release_vox_m120.sbp, 1,1,1,1,0
 ''
-RELOAD_PAUSE:
+PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
+MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
+IF &msganswer = 1 THEN FP, effector_gripperDisengage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 PRINT "NEXT VOXEL: 8 at [0.0 0.0 0.0] <-------------------------- VOXEL"
@@ -151,6 +171,7 @@ PRINT "ATTACH voxel: 8 to 6 at -y"
 PRINT "ATTACH voxel: 8 to 7 at -x"
 ''
 PRINT %(147)
+PRINT "PLACE_VOXEL_Z_8:"
 PLACE_VOXEL_Z_8:
 FP, place_vox_0.sbp,1,1,1,1,0
 FP, bolt.sbp,1,1,1,1,0
@@ -162,11 +183,14 @@ PAUSE
 FP, release_vox_0.sbp, 1,1,1,1,0
 ''
 PRINT %(147)
+PRINT "ATTACH_Y_8:"
 ATTACH_Y_8:
 ''
-RELOAD_PAUSE:
+PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
+MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
+IF &msganswer = 1 THEN FP, effector_gripperDisengage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 MOVE_BOLT_MY:
@@ -181,11 +205,14 @@ PAUSE
 FP, release_vox_p120.sbp, 1,1,1,1,0
 ''
 PRINT %(147)
+PRINT "ATTACH_X_8:"
 ATTACH_X_8:
 ''
-RELOAD_PAUSE:
+PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
+MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
+IF &msganswer = 1 THEN FP, effector_gripperDisengage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 MOVE_BOLT_MX:

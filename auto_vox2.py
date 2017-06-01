@@ -44,7 +44,7 @@ def main():
     global seeded_num
     
     # user inputs
-    seeded_num = 3                     # number of layers seeded; typically 2
+    seeded_num = 2                     # number of layers seeded; typically 2
     show_vox_build_flag = False        # shows plot of vox build 
     output_shopbot_build_flag = True   # outputs shopbot build
     plot_cuboct_flag = True            # shows full cuboct lattice on plot
@@ -78,7 +78,7 @@ def main():
     # -------------------------------------------------------------------------------
     
     # input structure note: seeded is for visualization, build output assumes seeded_num (see code below)
-    input_vox_structure = v2x2  # <-------------------------- USER INPUT
+    input_vox_structure = v3x3  # <-------------------------- USER INPUT
     
     # print input_vox_structure
     if show_vox_build_flag:
@@ -393,7 +393,7 @@ def shp_reload():  # old location where people can manually reload
     print 'J5 -130,-300,170,0,0'
     print 'FP, effector_jawOpen.sbp,1,1,1,1,0'
     print 'MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )'
-	print 'IF &msganswer = 1 THEN FP, effector_gripperDisengage.sbp,1,1,1,1,0'
+    print 'IF &msganswer = 1 THEN FP, effector_gripperDisengage.sbp,1,1,1,1,0'
     print "''Finished screw/nut feed?"
     print 'PAUSE'
     
