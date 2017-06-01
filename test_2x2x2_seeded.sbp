@@ -11,7 +11,7 @@ PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
 MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &msganswer = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
+IF &MSGANSWER = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 PRINT "NEXT VOXEL: 4 at [0.0 0.0 -76.2] <-------------------------- VOXEL"
@@ -19,48 +19,12 @@ PRINT "NEXT VOXEL: 4 at [0.0 0.0 -76.2] <-------------------------- VOXEL"
 &current_vox_y = 0.0
 &current_vox_z = -76.2
 ''
-PRINT "ATTACH voxel: 4 to 2 at -y"
-PRINT "ATTACH voxel: 4 to 3 at -x"
-''
-PRINT %(147)
-PRINT "PLACE_VOXEL_Y_4:"
-PLACE_VOXEL_Y_4:
-FP, place_vox_p120.sbp,1,1,1,1,0
-FP, bolt.sbp,1,1,1,1,0
-FP, effector_jawOpen.sbp,1,1,1,1,0
-FP, effector_gripperDisengage.sbp,1,1,1,1,0
-MOVE_OUT_4:
-''Ok to move out Baxis@+120?
-PAUSE
-FP, release_vox_p120.sbp, 1,1,1,1,0
-''
-PRINT %(147)
-PRINT "ATTACH_X_4:"
-ATTACH_X_4:
 ''
 PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
 MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &msganswer = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
-''Finished screw/nut feed?
-PAUSE
-MOVE_BOLT_MX:
-FP, effector_jawEnter.sbp,1,1,1,1,0
-FP, place_vox_m120.sbp,1,1,1,1,0
-''Ok to bolt mx?
-FP, bolt.sbp,1,1,1,1,0
-''
-MOVE_OUT_m120_4:
-''Ok to move out B@-120?
-PAUSE
-FP, release_vox_m120.sbp, 1,1,1,1,0
-''
-PRINT "RELOAD_PAUSE"
-J5 -130,-300,170,0,0
-FP, effector_jawOpen.sbp,1,1,1,1,0
-MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &msganswer = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
+IF &MSGANSWER = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 PRINT "NEXT VOXEL: 7 at [76.2 0.0 0.0] <-------------------------- VOXEL"
@@ -68,48 +32,12 @@ PRINT "NEXT VOXEL: 7 at [76.2 0.0 0.0] <-------------------------- VOXEL"
 &current_vox_y = 0.0
 &current_vox_z = 0.0
 ''
-PRINT "ATTACH voxel: 7 to 3 at -z"
-PRINT "ATTACH voxel: 7 to 5 at -y"
-''
-PRINT %(147)
-PRINT "PLACE_VOXEL_Z_7:"
-PLACE_VOXEL_Z_7:
-FP, place_vox_0.sbp,1,1,1,1,0
-FP, bolt.sbp,1,1,1,1,0
-FP, effector_jawOpen.sbp,1,1,1,1,0
-FP, effector_gripperDisengage.sbp,1,1,1,1,0
-MOVE_OUT_7:
-''Ok to move out B@0?
-PAUSE
-FP, release_vox_0.sbp, 1,1,1,1,0
-''
-PRINT %(147)
-PRINT "ATTACH_Y_7:"
-ATTACH_Y_7:
 ''
 PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
 MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &msganswer = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
-''Finished screw/nut feed?
-PAUSE
-MOVE_BOLT_MY:
-FP, effector_jawEnter.sbp,1,1,1,1,0
-FP, place_vox_p120.sbp,1,1,1,1,0
-''Ok to bolt my?
-FP, bolt.sbp,1,1,1,1,0
-''
-MOVE_OUT_p120_7:
-''Ok to move out B@+120?
-PAUSE
-FP, release_vox_p120.sbp, 1,1,1,1,0
-''
-PRINT "RELOAD_PAUSE"
-J5 -130,-300,170,0,0
-FP, effector_jawOpen.sbp,1,1,1,1,0
-MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &msganswer = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
+IF &MSGANSWER = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 PRINT "NEXT VOXEL: 6 at [0.0 76.2 0.0] <-------------------------- VOXEL"
@@ -117,48 +45,12 @@ PRINT "NEXT VOXEL: 6 at [0.0 76.2 0.0] <-------------------------- VOXEL"
 &current_vox_y = 76.2
 &current_vox_z = 0.0
 ''
-PRINT "ATTACH voxel: 6 to 2 at -z"
-PRINT "ATTACH voxel: 6 to 5 at -x"
-''
-PRINT %(147)
-PRINT "PLACE_VOXEL_Z_6:"
-PLACE_VOXEL_Z_6:
-FP, place_vox_0.sbp,1,1,1,1,0
-FP, bolt.sbp,1,1,1,1,0
-FP, effector_jawOpen.sbp,1,1,1,1,0
-FP, effector_gripperDisengage.sbp,1,1,1,1,0
-MOVE_OUT_6:
-''Ok to move out B@0?
-PAUSE
-FP, release_vox_0.sbp, 1,1,1,1,0
-''
-PRINT %(147)
-PRINT "ATTACH_X_6:"
-ATTACH_X_6:
 ''
 PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
 MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &msganswer = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
-''Finished screw/nut feed?
-PAUSE
-MOVE_BOLT_MX:
-FP, effector_jawEnter.sbp,1,1,1,1,0
-FP, place_vox_m120.sbp,1,1,1,1,0
-''Ok to bolt mx?
-FP, bolt.sbp,1,1,1,1,0
-''
-MOVE_OUT_m120_6:
-''Ok to move out B@-120?
-PAUSE
-FP, release_vox_m120.sbp, 1,1,1,1,0
-''
-PRINT "RELOAD_PAUSE"
-J5 -130,-300,170,0,0
-FP, effector_jawOpen.sbp,1,1,1,1,0
-MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &msganswer = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
+IF &MSGANSWER = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 PRINT "NEXT VOXEL: 8 at [0.0 0.0 0.0] <-------------------------- VOXEL"
@@ -190,19 +82,19 @@ PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
 MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &msganswer = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
+IF &MSGANSWER = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
-MOVE_BOLT_MY:
+MOVE_BOLT_PY:
 FP, effector_jawEnter.sbp,1,1,1,1,0
-FP, place_vox_p120.sbp,1,1,1,1,0
-''Ok to bolt my?
+FP, place_vox_m120.sbp,1,1,1,1,0
+''Ok to bolt py?
 FP, bolt.sbp,1,1,1,1,0
 ''
-MOVE_OUT_p120_8:
-''Ok to move out B@+120?
+MOVE_OUT_m120_8:
+''Ok to move out B@-120?
 PAUSE
-FP, release_vox_p120.sbp, 1,1,1,1,0
+FP, release_vox_m120.sbp, 1,1,1,1,0
 ''
 PRINT %(147)
 PRINT "ATTACH_X_8:"
@@ -212,19 +104,19 @@ PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
 MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &msganswer = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
+IF &MSGANSWER = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
-MOVE_BOLT_MX:
+MOVE_BOLT_PX:
 FP, effector_jawEnter.sbp,1,1,1,1,0
-FP, place_vox_m120.sbp,1,1,1,1,0
-''Ok to bolt mx?
+FP, place_vox_p120.sbp,1,1,1,1,0
+''Ok to bolt px?
 FP, bolt.sbp,1,1,1,1,0
 ''
-MOVE_OUT_m120_8:
-''Ok to move out B@-120?
+MOVE_OUT_p120_8:
+''Ok to move out B@+120?
 PAUSE
-FP, release_vox_m120.sbp, 1,1,1,1,0
+FP, release_vox_p120.sbp, 1,1,1,1,0
 PRINT "End Time:"
 PRINT %(146); " "; %(147)
 ''
