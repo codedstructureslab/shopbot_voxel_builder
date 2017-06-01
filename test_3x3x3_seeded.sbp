@@ -11,7 +11,7 @@ PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
 MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &msganswer = 1 THEN FP, effector_gripperDisengage.sbp,1,1,1,1,0
+IF &msganswer = 1 THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 PRINT "NEXT VOXEL: 7 at [76.2 -76.2 -76.2] <-------------------------- VOXEL"
@@ -37,7 +37,7 @@ PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
 MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &msganswer = 1 THEN FP, effector_gripperDisengage.sbp,1,1,1,1,0
+IF &msganswer = 1 THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 PRINT "NEXT VOXEL: 5 at [0.0 0.0 -76.2] <-------------------------- VOXEL"
@@ -68,7 +68,7 @@ PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
 MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &msganswer = 1 THEN FP, effector_gripperDisengage.sbp,1,1,1,1,0
+IF &msganswer = 1 THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 MOVE_BOLT_MX:
@@ -86,7 +86,7 @@ PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
 MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &msganswer = 1 THEN FP, effector_gripperDisengage.sbp,1,1,1,1,0
+IF &msganswer = 1 THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 PRINT "NEXT VOXEL: 3 at [-76.2 76.2 -76.2] <-------------------------- VOXEL"
@@ -112,7 +112,7 @@ PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
 MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &msganswer = 1 THEN FP, effector_gripperDisengage.sbp,1,1,1,1,0
+IF &msganswer = 1 THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 PRINT "NEXT VOXEL: 13 at [76.2 0.0 0.0] <-------------------------- VOXEL"
@@ -143,7 +143,7 @@ PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
 MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &msganswer = 1 THEN FP, effector_gripperDisengage.sbp,1,1,1,1,0
+IF &msganswer = 1 THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 MOVE_BOLT_MY:
@@ -161,7 +161,7 @@ PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
 MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &msganswer = 1 THEN FP, effector_gripperDisengage.sbp,1,1,1,1,0
+IF &msganswer = 1 THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 PRINT "NEXT VOXEL: 11 at [0.0 76.2 0.0] <-------------------------- VOXEL"
@@ -192,7 +192,7 @@ PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
 MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &msganswer = 1 THEN FP, effector_gripperDisengage.sbp,1,1,1,1,0
+IF &msganswer = 1 THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 MOVE_BOLT_MX:
@@ -210,7 +210,7 @@ PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
 MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &msganswer = 1 THEN FP, effector_gripperDisengage.sbp,1,1,1,1,0
+IF &msganswer = 1 THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 PRINT "NEXT VOXEL: 19 at [76.2 76.2 76.2] <-------------------------- VOXEL"
@@ -236,7 +236,7 @@ PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
 MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &msganswer = 1 THEN FP, effector_gripperDisengage.sbp,1,1,1,1,0
+IF &msganswer = 1 THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 PRINT "NEXT VOXEL: 8 at [0.0 -76.2 -76.2] <-------------------------- VOXEL"
@@ -267,7 +267,7 @@ PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
 MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &msganswer = 1 THEN FP, effector_gripperDisengage.sbp,1,1,1,1,0
+IF &msganswer = 1 THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 MOVE_BOLT_MX:
@@ -285,7 +285,7 @@ PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
 MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &msganswer = 1 THEN FP, effector_gripperDisengage.sbp,1,1,1,1,0
+IF &msganswer = 1 THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 PRINT "NEXT VOXEL: 6 at [-76.2 0.0 -76.2] <-------------------------- VOXEL"
@@ -316,7 +316,7 @@ PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
 MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &msganswer = 1 THEN FP, effector_gripperDisengage.sbp,1,1,1,1,0
+IF &msganswer = 1 THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 MOVE_BOLT_MX:
@@ -334,7 +334,7 @@ PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
 MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &msganswer = 1 THEN FP, effector_gripperDisengage.sbp,1,1,1,1,0
+IF &msganswer = 1 THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 PRINT "NEXT VOXEL: 16 at [76.2 -76.2 0.0] <-------------------------- VOXEL"
@@ -365,7 +365,7 @@ PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
 MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &msganswer = 1 THEN FP, effector_gripperDisengage.sbp,1,1,1,1,0
+IF &msganswer = 1 THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 MOVE_BOLT_MY:
@@ -383,7 +383,7 @@ PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
 MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &msganswer = 1 THEN FP, effector_gripperDisengage.sbp,1,1,1,1,0
+IF &msganswer = 1 THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 PRINT "NEXT VOXEL: 14 at [0.0 0.0 0.0] <-------------------------- VOXEL"
@@ -415,7 +415,7 @@ PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
 MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &msganswer = 1 THEN FP, effector_gripperDisengage.sbp,1,1,1,1,0
+IF &msganswer = 1 THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 MOVE_BOLT_MY:
@@ -437,7 +437,7 @@ PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
 MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &msganswer = 1 THEN FP, effector_gripperDisengage.sbp,1,1,1,1,0
+IF &msganswer = 1 THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 MOVE_BOLT_MX:
@@ -455,7 +455,7 @@ PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
 MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &msganswer = 1 THEN FP, effector_gripperDisengage.sbp,1,1,1,1,0
+IF &msganswer = 1 THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 PRINT "NEXT VOXEL: 12 at [-76.2 76.2 0.0] <-------------------------- VOXEL"
@@ -486,7 +486,7 @@ PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
 MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &msganswer = 1 THEN FP, effector_gripperDisengage.sbp,1,1,1,1,0
+IF &msganswer = 1 THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 MOVE_BOLT_MX:
@@ -504,7 +504,7 @@ PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
 MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &msganswer = 1 THEN FP, effector_gripperDisengage.sbp,1,1,1,1,0
+IF &msganswer = 1 THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 PRINT "NEXT VOXEL: 22 at [76.2 0.0 76.2] <-------------------------- VOXEL"
@@ -535,7 +535,7 @@ PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
 MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &msganswer = 1 THEN FP, effector_gripperDisengage.sbp,1,1,1,1,0
+IF &msganswer = 1 THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 MOVE_BOLT_MY:
@@ -553,7 +553,7 @@ PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
 MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &msganswer = 1 THEN FP, effector_gripperDisengage.sbp,1,1,1,1,0
+IF &msganswer = 1 THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 PRINT "NEXT VOXEL: 20 at [0.0 76.2 76.2] <-------------------------- VOXEL"
@@ -584,7 +584,7 @@ PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
 MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &msganswer = 1 THEN FP, effector_gripperDisengage.sbp,1,1,1,1,0
+IF &msganswer = 1 THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 MOVE_BOLT_MX:
@@ -602,7 +602,7 @@ PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
 MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &msganswer = 1 THEN FP, effector_gripperDisengage.sbp,1,1,1,1,0
+IF &msganswer = 1 THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 PRINT "NEXT VOXEL: 9 at [-76.2 -76.2 -76.2] <-------------------------- VOXEL"
@@ -633,7 +633,7 @@ PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
 MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &msganswer = 1 THEN FP, effector_gripperDisengage.sbp,1,1,1,1,0
+IF &msganswer = 1 THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 MOVE_BOLT_MX:
@@ -651,7 +651,7 @@ PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
 MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &msganswer = 1 THEN FP, effector_gripperDisengage.sbp,1,1,1,1,0
+IF &msganswer = 1 THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 PRINT "NEXT VOXEL: 17 at [0.0 -76.2 0.0] <-------------------------- VOXEL"
@@ -683,7 +683,7 @@ PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
 MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &msganswer = 1 THEN FP, effector_gripperDisengage.sbp,1,1,1,1,0
+IF &msganswer = 1 THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 MOVE_BOLT_MY:
@@ -705,7 +705,7 @@ PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
 MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &msganswer = 1 THEN FP, effector_gripperDisengage.sbp,1,1,1,1,0
+IF &msganswer = 1 THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 MOVE_BOLT_MX:
@@ -723,7 +723,7 @@ PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
 MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &msganswer = 1 THEN FP, effector_gripperDisengage.sbp,1,1,1,1,0
+IF &msganswer = 1 THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 PRINT "NEXT VOXEL: 15 at [-76.2 0.0 0.0] <-------------------------- VOXEL"
@@ -755,7 +755,7 @@ PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
 MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &msganswer = 1 THEN FP, effector_gripperDisengage.sbp,1,1,1,1,0
+IF &msganswer = 1 THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 MOVE_BOLT_MY:
@@ -777,7 +777,7 @@ PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
 MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &msganswer = 1 THEN FP, effector_gripperDisengage.sbp,1,1,1,1,0
+IF &msganswer = 1 THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 MOVE_BOLT_MX:
@@ -795,7 +795,7 @@ PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
 MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &msganswer = 1 THEN FP, effector_gripperDisengage.sbp,1,1,1,1,0
+IF &msganswer = 1 THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 PRINT "NEXT VOXEL: 25 at [76.2 -76.2 76.2] <-------------------------- VOXEL"
@@ -826,7 +826,7 @@ PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
 MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &msganswer = 1 THEN FP, effector_gripperDisengage.sbp,1,1,1,1,0
+IF &msganswer = 1 THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 MOVE_BOLT_MY:
@@ -844,7 +844,7 @@ PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
 MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &msganswer = 1 THEN FP, effector_gripperDisengage.sbp,1,1,1,1,0
+IF &msganswer = 1 THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 PRINT "NEXT VOXEL: 23 at [0.0 0.0 76.2] <-------------------------- VOXEL"
@@ -876,7 +876,7 @@ PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
 MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &msganswer = 1 THEN FP, effector_gripperDisengage.sbp,1,1,1,1,0
+IF &msganswer = 1 THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 MOVE_BOLT_MY:
@@ -898,7 +898,7 @@ PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
 MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &msganswer = 1 THEN FP, effector_gripperDisengage.sbp,1,1,1,1,0
+IF &msganswer = 1 THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 MOVE_BOLT_MX:
@@ -916,7 +916,7 @@ PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
 MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &msganswer = 1 THEN FP, effector_gripperDisengage.sbp,1,1,1,1,0
+IF &msganswer = 1 THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 PRINT "NEXT VOXEL: 21 at [-76.2 76.2 76.2] <-------------------------- VOXEL"
@@ -947,7 +947,7 @@ PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
 MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &msganswer = 1 THEN FP, effector_gripperDisengage.sbp,1,1,1,1,0
+IF &msganswer = 1 THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 MOVE_BOLT_MX:
@@ -965,7 +965,7 @@ PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
 MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &msganswer = 1 THEN FP, effector_gripperDisengage.sbp,1,1,1,1,0
+IF &msganswer = 1 THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 PRINT "NEXT VOXEL: 18 at [-76.2 -76.2 0.0] <-------------------------- VOXEL"
@@ -997,7 +997,7 @@ PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
 MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &msganswer = 1 THEN FP, effector_gripperDisengage.sbp,1,1,1,1,0
+IF &msganswer = 1 THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 MOVE_BOLT_MY:
@@ -1019,7 +1019,7 @@ PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
 MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &msganswer = 1 THEN FP, effector_gripperDisengage.sbp,1,1,1,1,0
+IF &msganswer = 1 THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 MOVE_BOLT_MX:
@@ -1037,7 +1037,7 @@ PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
 MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &msganswer = 1 THEN FP, effector_gripperDisengage.sbp,1,1,1,1,0
+IF &msganswer = 1 THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 PRINT "NEXT VOXEL: 26 at [0.0 -76.2 76.2] <-------------------------- VOXEL"
@@ -1069,7 +1069,7 @@ PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
 MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &msganswer = 1 THEN FP, effector_gripperDisengage.sbp,1,1,1,1,0
+IF &msganswer = 1 THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 MOVE_BOLT_MY:
@@ -1091,7 +1091,7 @@ PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
 MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &msganswer = 1 THEN FP, effector_gripperDisengage.sbp,1,1,1,1,0
+IF &msganswer = 1 THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 MOVE_BOLT_MX:
@@ -1109,7 +1109,7 @@ PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
 MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &msganswer = 1 THEN FP, effector_gripperDisengage.sbp,1,1,1,1,0
+IF &msganswer = 1 THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 PRINT "NEXT VOXEL: 24 at [-76.2 0.0 76.2] <-------------------------- VOXEL"
@@ -1141,7 +1141,7 @@ PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
 MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &msganswer = 1 THEN FP, effector_gripperDisengage.sbp,1,1,1,1,0
+IF &msganswer = 1 THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 MOVE_BOLT_MY:
@@ -1163,7 +1163,7 @@ PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
 MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &msganswer = 1 THEN FP, effector_gripperDisengage.sbp,1,1,1,1,0
+IF &msganswer = 1 THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 MOVE_BOLT_MX:
@@ -1181,7 +1181,7 @@ PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
 MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &msganswer = 1 THEN FP, effector_gripperDisengage.sbp,1,1,1,1,0
+IF &msganswer = 1 THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 PRINT "NEXT VOXEL: 27 at [-76.2 -76.2 76.2] <-------------------------- VOXEL"
@@ -1213,7 +1213,7 @@ PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
 MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &msganswer = 1 THEN FP, effector_gripperDisengage.sbp,1,1,1,1,0
+IF &msganswer = 1 THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 MOVE_BOLT_MY:
@@ -1235,7 +1235,7 @@ PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
 MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &msganswer = 1 THEN FP, effector_gripperDisengage.sbp,1,1,1,1,0
+IF &msganswer = 1 THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 MOVE_BOLT_MX:

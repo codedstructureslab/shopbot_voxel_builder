@@ -78,7 +78,7 @@ def main():
     # -------------------------------------------------------------------------------
     
     # input structure note: seeded is for visualization, build output assumes seeded_num (see code below)
-    input_vox_structure = v3x3  # <-------------------------- USER INPUT
+    input_vox_structure = v2x2  # <-------------------------- USER INPUT
     
     # print input_vox_structure
     if show_vox_build_flag:
@@ -393,7 +393,7 @@ def shp_reload():  # old location where people can manually reload
     print 'J5 -130,-300,170,0,0'
     print 'FP, effector_jawOpen.sbp,1,1,1,1,0'
     print 'MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )'
-    print 'IF &msganswer = 1 THEN FP, effector_gripperDisengage.sbp,1,1,1,1,0'
+    print 'IF &msganswer = 1 THEN FP, effector_gripperEngage.sbp,1,1,1,1,0'
     print "''Finished screw/nut feed?"
     print 'PAUSE'
     
