@@ -71,7 +71,8 @@
 VS,&move_speed_XYZ,&move_speed_XYZ,&move_speed_AB,&move_speed_AB,&jog_speed_XYZ,&jog_speed_XYZ,&jog_speed_AB,&jog_speed_AB 
 
 ''Ask user if they want to reset their Z position
-	GOSUB AskToResetZ ''sets variable &reset_z to either yes or no
+	''GOSUB AskToResetZ ''sets variable &reset_z to either yes or no
+    &reset_Z = yes  '' skip above ask and default resetting z
 	
 ''Check if prox switches are already being triggered and moves off them or prompts user to do so
 Check_Switch_Status:
