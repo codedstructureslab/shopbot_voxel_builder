@@ -257,10 +257,10 @@ Failed_Contact_Exit:
 
 Set_Voxel_Zero:
 	VA,&X_voxel_zero,&Y_voxel_zero,&Z_voxel_zero,0,0,0,0,0,0,0 '''' also resets zero table axes
-	&lxlim = -750
-	&hxlim = 100
-	&lylim = -525
-	&hylim = 100
+	&lxlim = -1000
+	&hxlim = 1000
+	&lylim = -1000
+	&hylim = 1000
 	&lzlim = -85
 	&hzlim = 400
 	&lalim = -300
