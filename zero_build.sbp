@@ -39,14 +39,14 @@
 	&small_move_AB = &back_off_AB + 5 ''degrees; just past back-off distance
 	
 	''Offsets from prox switches (from my_variables)
-	&X_dist = -897.1
-	&Y_dist = -551.8 
-	&Z_dist = 50  
-	&A_dist = 137.8 ''degrees
-	&B_dist = 1.18  ''degrees
+	&X_dist = -897.5  '' last adjustment (0.409,0.409,-0.5) 20170608
+    &Y_dist = -552.2
+    &Z_dist = 50.5
+    &A_dist = 137.8 ''degrees
+    &B_dist = 1.18  ''degrees
 
-	''prox switch variables
-	&TrgtHIT = 0 ''normally closed switch
+    ''prox switch variables
+    &TrgtHIT = 0 ''normally closed switch
 	&ABTrgtHIT = 0 ''normally closed
     &Xtrgt = 2 ''input number
     &Ytrgt = 3 ''''
