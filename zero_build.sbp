@@ -62,10 +62,11 @@
 	&current_axis = "[unable to determine]" ''used for Failed_Contact_Exit routine to inform user which axis didn''t make contact
 	&ResetZ = no ''either yes or no; default = no
 
-    ''new voxel zero offset locations from zero program
-	&X_voxel_zero = -255.275 ''''20170503 (-.205,-.409,0)
-	&Y_voxel_zero = -465.251 
-    &Z_voxel_zero =  481.000
+    '' loading calibrated values for position of voxel zero location
+	FP cal_voxel_zero.sbp,1,1,1,1,0,0,0,0,1,1
+	''&X_voxel_zero = -255.275 ''''20170503 (-.205,-.409,0)
+	''&Y_voxel_zero = -465.251 
+    ''&Z_voxel_zero =  481.000
 
 ''Set Move and Jog Speeds
 VS,&move_speed_XYZ,&move_speed_XYZ,&move_speed_AB,&move_speed_AB,&jog_speed_XYZ,&jog_speed_XYZ,&jog_speed_AB,&jog_speed_AB 
