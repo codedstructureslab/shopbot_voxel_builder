@@ -2,7 +2,7 @@
 &x_screw = 0
 &y_screw = 0
 &z_screw = -30
-&y_wiggle = 0.3
+''&y_wiggle = 0.3
 ''
 ''
 vs 5,5,5,5,20,20,20,20      '' resume speed
@@ -12,12 +12,20 @@ FP, effector_jawFlat.sbp,1,1,1,0        '' setting jaw to flat position
 FP, load_nextScrew.sbp,1,1,1,1,0        '' rotate screw dispenser
 m3 &x_screw, &y_screw, &z_screw + 5     '' move down to 5 mm above screw dispenser
 '' wiggle motion
-m3 &x_screw, &y_screw + y_wiggle, &z_screw + 2.00  '' move down to screw dispenser
-m3 &x_screw, &y_screw - y_wiggle, &z_screw + 1.66  '' move down to screw dispenser
-m3 &x_screw, &y_screw + y_wiggle, &z_screw + 1.33  '' move down to screw dispenser
-m3 &x_screw, &y_screw - y_wiggle, &z_screw + 1.00  '' move down to screw dispenser
-m3 &x_screw, &y_screw + y_wiggle, &z_screw + 0.66  '' move down to screw dispenser
-m3 &x_screw, &y_screw - y_wiggle, &z_screw + 0.33  '' move down to screw dispenser
+''m3 &x_screw, &y_screw + y_wiggle, &z_screw + 2.00  '' move down to screw dispenser
+''m3 &x_screw, &y_screw - y_wiggle, &z_screw + 1.66  '' move down to screw dispenser
+''m3 &x_screw, &y_screw + y_wiggle, &z_screw + 1.33  '' move down to screw dispenser
+''m3 &x_screw, &y_screw - y_wiggle, &z_screw + 1.00  '' move down to screw dispenser
+''m3 &x_screw, &y_screw + y_wiggle, &z_screw + 0.66  '' move down to screw dispenser
+''m3 &x_screw, &y_screw - y_wiggle, &z_screw + 0.33  '' move down to screw dispenser
+
+m3 &x_screw, &y_screw + 0.3, &z_screw + 2.00  '' move down to screw dispenser
+m3 &x_screw, &y_screw - 0.3, &z_screw + 1.66  '' move down to screw dispenser
+m3 &x_screw, &y_screw + 0.3, &z_screw + 1.33  '' move down to screw dispenser
+m3 &x_screw, &y_screw - 0.3, &z_screw + 1.00  '' move down to screw dispenser
+m3 &x_screw, &y_screw + 0.3, &z_screw + 0.66  '' move down to screw dispenser
+m3 &x_screw, &y_screw - 0.3, &z_screw + 0.33  '' move down to screw dispenser
+
 m3 &x_screw, &y_screw, &z_screw                    '' SCREW PICKUP LOCATION
 FP, load_bolt.sbp,1,1,1,1,0                '' bolt screw into jaw
 m3 &x_screw, &y_screw, &z_screw + 20       '' back out straight up for 20 mm
