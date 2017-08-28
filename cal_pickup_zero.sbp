@@ -1,8 +1,16 @@
+'' just kidding; reverting
 &zero_pX = -672.643
 &zero_pY = -505.531
 &zero_pZ =  105.355
 &zero_pA =  135
 &zero_pB =    0
+
+''20170828 resume shopbot testing after wing builds; slight mods on screw/nut pickup with auto align features
+''&zero_pX = -668.643
+''&zero_pY = -505.531
+''&zero_pZ =  111.000
+''&zero_pA =  135
+''&zero_pB =    0
 ''
 ''
 ''
