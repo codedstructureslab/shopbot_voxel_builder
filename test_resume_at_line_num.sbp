@@ -1,28 +1,22 @@
-A01:
-m3 1,0
-PRINT "1"
+Y_MOTION:
+my 5
+PRINT "my 5"
+my 10
+PRINT "my 10"
+my 0
+PRINT "my 0"
+''Y_MOTION finished
+PAUSE
 
-A02:
-m3 1,1
-PRINT "2"
+X_MOTION:
+mx 5
+PRINT "mx 5"
+mx 10
+PRINT "mx 10"
+mx 0
+PRINT "mx 0"
+''X_MOTION finished
+PAUSE
 
-A03:
-m3 2,1
-PRINT "3"
-m3 2,2
-PRINT "4"
-m3 3,2
-PRINT "5"
-m3 3,3
-PRINT "6"
-m3 4,3
-PRINT "7"
-m3 4,4
-PRINT "8"
-m3 5,4
-PRINT "9"
-
-A10:
-m3 5,5
-PRINT "10"
-m3 6,5
+END:
+PRINT "done"
