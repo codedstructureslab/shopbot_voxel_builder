@@ -7,7 +7,7 @@ TODO:
 - consider making a voxel definition gui
 
 USAGE:
-  mspython auto_vox.py >> ./SBP_output/<filename>.SBP  
+  mspython auto_vox2.py >> ./SBP_output/<filename>.SBP  
 '''
 
 ## IMPORTS -----------------------------------
@@ -459,6 +459,7 @@ def shp_attach_x(vox_num):
     print 'FP, effector_jawEnter.sbp,1,1,1,1,0'
     print 'FP, place_vox_p120.sbp,1,1,1,1,0'
     print "''Ok to bolt px?"
+    print 'PAUSE'
     print 'FP, bolt.sbp,1,1,1,1,0'
     print "''"
     print 'MOVE_OUT_p120_' + str(vox_num) + ':'
@@ -477,6 +478,7 @@ def shp_attach_y(vox_num):
     print 'FP, effector_jawEnter.sbp,1,1,1,1,0'
     print 'FP, place_vox_m120.sbp,1,1,1,1,0'
     print "''Ok to bolt py?"
+    print 'PAUSE'
     print 'FP, bolt.sbp,1,1,1,1,0'
     print "''"
     print 'MOVE_OUT_m120_' + str(vox_num) + ':'
@@ -494,6 +496,7 @@ def shp_attach_z(vox_num):  # not used as it's typically the first attachment ma
     print 'FP, effector_jawOpen.sbp,1,1,1,1,0'
     print 'FP, place_vox_0.sbp,1,1,1,1,0'
     print "''Ok to bolt mz?"
+    print 'PAUSE'
     print 'FP, bolt.sbp,1,1,1,1,0'
     print "''"
     print 'MOVE_OUT_0_' + str(vox_num) + ':'

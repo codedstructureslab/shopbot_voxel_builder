@@ -49,6 +49,7 @@ MOVE_BOLT_PX:
 FP, effector_jawEnter.sbp,1,1,1,1,0
 FP, place_vox_p120.sbp,1,1,1,1,0
 ''Ok to bolt px?
+PAUSE
 FP, bolt.sbp,1,1,1,1,0
 ''
 MOVE_OUT_p120_4:
@@ -98,6 +99,7 @@ MOVE_BOLT_PY:
 FP, effector_jawEnter.sbp,1,1,1,1,0
 FP, place_vox_m120.sbp,1,1,1,1,0
 ''Ok to bolt py?
+PAUSE
 FP, bolt.sbp,1,1,1,1,0
 ''
 MOVE_OUT_m120_7:
@@ -147,6 +149,7 @@ MOVE_BOLT_PX:
 FP, effector_jawEnter.sbp,1,1,1,1,0
 FP, place_vox_p120.sbp,1,1,1,1,0
 ''Ok to bolt px?
+PAUSE
 FP, bolt.sbp,1,1,1,1,0
 ''
 MOVE_OUT_p120_6:
@@ -197,6 +200,7 @@ MOVE_BOLT_PY:
 FP, effector_jawEnter.sbp,1,1,1,1,0
 FP, place_vox_m120.sbp,1,1,1,1,0
 ''Ok to bolt py?
+PAUSE
 FP, bolt.sbp,1,1,1,1,0
 ''
 MOVE_OUT_m120_8:
@@ -219,6 +223,7 @@ MOVE_BOLT_PX:
 FP, effector_jawEnter.sbp,1,1,1,1,0
 FP, place_vox_p120.sbp,1,1,1,1,0
 ''Ok to bolt px?
+PAUSE
 FP, bolt.sbp,1,1,1,1,0
 ''
 MOVE_OUT_p120_8:
