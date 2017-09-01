@@ -459,7 +459,7 @@ def shp_attach_x(vox_num):
     print 'ATTACH_X_' + str(vox_num) + ':'
     shp_reload_bolts()
     print 'MOVE_BOLT_PX:'
-    print 'FP, effector_jawEnter.sbp,1,1,1,1,0'
+    print 'FP, effector_jawOpen.sbp,1,1,1,1,0'
     print 'FP, place_vox_p120.sbp,1,1,1,1,0'
     print 'MSGBOX(YES: BOLT_PX  NO: Do nothing,yesno,BOLT?  )'
     print 'IF &MSGANSWER = "YES" THEN FP, bolt.sbp,1,1,1,1,0'
@@ -477,7 +477,7 @@ def shp_attach_y(vox_num):
     print 'ATTACH_Y_' + str(vox_num) + ':'
     shp_reload_bolts()
     print 'MOVE_BOLT_PY:'
-    print 'FP, effector_jawEnter.sbp,1,1,1,1,0'
+    print 'FP, effector_jawOpen.sbp,1,1,1,1,0'
     print 'FP, place_vox_m120.sbp,1,1,1,1,0'
     print 'MSGBOX(YES: BOLT_PY  NO: Do nothing,yesno,BOLT?  )'
     print 'IF &MSGANSWER = "YES" THEN FP, bolt.sbp,1,1,1,1,0'
