@@ -410,7 +410,8 @@ def shp_place_vox_x(vox_num):
     print 'PRINT "PLACE_VOXEL_X_' + str(vox_num) + ':"'
     print 'PLACE_VOXEL_X_' + str(vox_num) + ':'
     print 'FP, place_vox_p120.sbp,1,1,1,1,0'
-    print 'FP, bolt.sbp,1,1,1,1,0'
+    print 'MSGBOX(YES: BOLT_X  NO: Do nothing,yesno,BOLT?  )'
+    print 'IF &MSGANSWER = "YES" THEN FP, bolt.sbp,1,1,1,1,0'	
     print 'FP, effector_jawOpen.sbp,1,1,1,1,0'
     print 'FP, effector_gripperDisengage.sbp,1,1,1,1,0'
     print 'MOVE_OUT_' + str(vox_num) + ':'
@@ -425,7 +426,8 @@ def shp_place_vox_y(vox_num):
     print 'PRINT "PLACE_VOXEL_Y_' + str(vox_num) + ':"'
     print 'PLACE_VOXEL_Y_' + str(vox_num) + ':'
     print 'FP, place_vox_m120.sbp,1,1,1,1,0'
-    print 'FP, bolt.sbp,1,1,1,1,0'
+    print 'MSGBOX(YES: BOLT_Y  NO: Do nothing,yesno,BOLT?  )'
+    print 'IF &MSGANSWER = "YES" THEN FP, bolt.sbp,1,1,1,1,0'
     print 'FP, effector_jawOpen.sbp,1,1,1,1,0'
     print 'FP, effector_gripperDisengage.sbp,1,1,1,1,0'
     print 'MOVE_OUT_' + str(vox_num) + ':'
@@ -440,7 +442,8 @@ def shp_place_vox_z(vox_num):
     print 'PRINT "PLACE_VOXEL_Z_' + str(vox_num) + ':"'
     print 'PLACE_VOXEL_Z_' + str(vox_num) + ':'
     print 'FP, place_vox_0.sbp,1,1,1,1,0'
-    print 'FP, bolt.sbp,1,1,1,1,0'
+    print 'MSGBOX(YES: BOLT_Z  NO: Do nothing,yesno,BOLT?  )'
+    print 'IF &MSGANSWER = "YES" THEN FP, bolt.sbp,1,1,1,1,0'
     print 'FP, effector_jawOpen.sbp,1,1,1,1,0'
     print 'FP, effector_gripperDisengage.sbp,1,1,1,1,0'
     print 'MOVE_OUT_' + str(vox_num) + ':'
@@ -458,9 +461,8 @@ def shp_attach_x(vox_num):
     print 'MOVE_BOLT_PX:'
     print 'FP, effector_jawEnter.sbp,1,1,1,1,0'
     print 'FP, place_vox_p120.sbp,1,1,1,1,0'
-    print "''Ok to bolt px?"
-    print 'PAUSE'
-    print 'FP, bolt.sbp,1,1,1,1,0'
+    print 'MSGBOX(YES: BOLT_PX  NO: Do nothing,yesno,BOLT?  )'
+    print 'IF &MSGANSWER = "YES" THEN FP, bolt.sbp,1,1,1,1,0'
     print "''"
     print 'MOVE_OUT_p120_' + str(vox_num) + ':'
     print "''Ok to move out B@+120?"
@@ -477,9 +479,8 @@ def shp_attach_y(vox_num):
     print 'MOVE_BOLT_PY:'
     print 'FP, effector_jawEnter.sbp,1,1,1,1,0'
     print 'FP, place_vox_m120.sbp,1,1,1,1,0'
-    print "''Ok to bolt py?"
-    print 'PAUSE'
-    print 'FP, bolt.sbp,1,1,1,1,0'
+    print 'MSGBOX(YES: BOLT_PY  NO: Do nothing,yesno,BOLT?  )'
+    print 'IF &MSGANSWER = "YES" THEN FP, bolt.sbp,1,1,1,1,0'
     print "''"
     print 'MOVE_OUT_m120_' + str(vox_num) + ':'
     print "''Ok to move out B@-120?"
@@ -495,9 +496,8 @@ def shp_attach_z(vox_num):  # not used as it's typically the first attachment ma
     print 'MOVE_BOLT_MZ:'
     print 'FP, effector_jawOpen.sbp,1,1,1,1,0'
     print 'FP, place_vox_0.sbp,1,1,1,1,0'
-    print "''Ok to bolt mz?"
-    print 'PAUSE'
-    print 'FP, bolt.sbp,1,1,1,1,0'
+    print 'MSGBOX(YES: BOLT_MZ  NO: Do nothing,yesno,BOLT?  )'
+    print 'IF &MSGANSWER = "YES" THEN FP, bolt.sbp,1,1,1,1,0'
     print "''"
     print 'MOVE_OUT_0_' + str(vox_num) + ':'
     print "''Ok to move out B@0?"
