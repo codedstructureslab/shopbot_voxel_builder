@@ -1,11 +1,16 @@
 '' PICKUP VOXEL  '' 20170516: integrate voxel loading
-&x_pickup_voxel =  44.533    '' recalibration after moving pickup baseplate 20170515
-&y_pickup_voxel = 228.700
-&z_pickup_voxel = -37.230
+&x_pickup_voxel =  42.750    '' recalibration 20170905
+&y_pickup_voxel = 228.05
+&z_pickup_voxel = -35.51
+''
+''&x_pickup_voxel =  44.533    '' recalibration after moving pickup baseplate 20170515
+''&y_pickup_voxel = 228.700
+''&z_pickup_voxel = -37.230
 &vox_approach_distance = 40  '' mm 
 &cos35 = 0.8191520443        '' cosd(35)
 &sin35 = 0.5735764364        '' sind(35)
 ''
+FP, load_nextVoxel.sbp,1,1,1,1,0        '' prepare next voxel
 ''
 vs 5,5,5,5,20,20,20,20      '' resume speed
 j5 &x_pickup_voxel + 50, &y_pickup_voxel, 0, 0, 0          '' VOXEL safe position (+50mm in x)
