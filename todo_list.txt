@@ -2,5 +2,5 @@
 * make GARI GUI
 * make a voxel map with sbp file to locate particular voxel
 * redo voxel pickup to only traverse in x axis - 20170905 done
-* change all pickup pause to 0.5 sec
+* change all pickup pause to 0.5 sec - 20170905 done
 
