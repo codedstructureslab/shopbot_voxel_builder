@@ -1,46 +1,67 @@
-'' PICKUP VOXEL  '' 20170516: integrate voxel loading
+'' PICKUP VOXEL  '' 20170905: going back to simple straight approach as jaw obstruction is removed
 &x_pickup_voxel =  42.750    '' recalibration 20170905
 &y_pickup_voxel = 228.05
 &z_pickup_voxel = -35.51
 ''
-''&x_pickup_voxel =  44.533    '' recalibration after moving pickup baseplate 20170515
-''&y_pickup_voxel = 228.700
-''&z_pickup_voxel = -37.230
 &vox_approach_distance = 40  '' mm 
-&cos35 = 0.8191520443        '' cosd(35)
-&sin35 = 0.5735764364        '' sind(35)
+vs 5,5,5,5,20,20,20,20       '' resume speed
 ''
 FP, load_nextVoxel.sbp,1,1,1,1,0        '' prepare next voxel
 ''
-vs 5,5,5,5,20,20,20,20      '' resume speed
-j5 &x_pickup_voxel + 50, &y_pickup_voxel, 0, 0, 0          '' VOXEL safe position (+50mm in x)
+j5 &x_pickup_voxel + 50, &y_pickup_voxel, 0, 0, 0             '' VOXEL safe position (+50mm in x)
 FP, effector_jawEnter.sbp,1,1,1,1,0
-'' VOXEL approach position for pickup @ angle to avoid jaw
-j3 &x_pickup_voxel + (&vox_approach_distance*&cos35), &y_pickup_voxel, &z_pickup_voxel - (&vox_approach_distance*&cos35)
-m3 &x_pickup_voxel +  5, &y_pickup_voxel, &z_pickup_voxel  '' move close (+5mm in x)
-vs 2,2,2,2,10,10,10,10      '' reduce speed
-m3 &x_pickup_voxel, &y_pickup_voxel, &z_pickup_voxel       '' VOXEL pickup position
-FP, effector_gripperEngage.sbp,1,1,1,1,0
+''
+j5 &x_pickup_voxel + 15, &y_pickup_voxel, 0, 0, 0             '' VOXEL approach position (+15mm in x)
+m3 &x_pickup_voxel +  5, &y_pickup_voxel, &z_pickup_voxel     '' move close (+5mm in x)
+vs 2,2,2,2,10,10,10,10                                        '' reduce speed
+m3 &x_pickup_voxel, &y_pickup_voxel, &z_pickup_voxel          '' VOXEL pickup position
+FP, effector_gripperEngage.sbp,1,1,1,1,0                      '' Engage Gripper - pick up
 m3 &x_pickup_voxel + (&vox_approach_distance*&cos35), &y_pickup_voxel, &z_pickup_voxel + (&vox_approach_distance*&cos35)     '' move out +xz@45 deg (slowly)
 vs 5,5,5,5,20,20,20,20      '' resume speed
-j5 &x_pickup_voxel + 50, &y_pickup_voxel, 0, 0, 0          '' VOXEL safe position (+50mm in x)
+j5 &x_pickup_voxel + 50, &y_pickup_voxel, 0, 0, 0             '' VOXEL safe position (+50mm in x)
 END
+''
+''
+'' (OLD as of 20170905)
+''
+'' ''&x_pickup_voxel =  44.533    '' recalibration after moving pickup baseplate 20170515
+'' ''&y_pickup_voxel = 228.700
+'' ''&z_pickup_voxel = -37.230
+'' &vox_approach_distance = 40  '' mm 
+'' &cos35 = 0.8191520443        '' cosd(35)
+'' &sin35 = 0.5735764364        '' sind(35)
+'' ''
+'' FP, load_nextVoxel.sbp,1,1,1,1,0        '' prepare next voxel
+'' ''
+'' vs 5,5,5,5,20,20,20,20      '' resume speed
+'' j5 &x_pickup_voxel + 50, &y_pickup_voxel, 0, 0, 0          '' VOXEL safe position (+50mm in x)
+'' FP, effector_jawEnter.sbp,1,1,1,1,0
+'' '' VOXEL approach position for pickup @ angle to avoid jaw
+'' j3 &x_pickup_voxel + (&vox_approach_distance*&cos35), &y_pickup_voxel, &z_pickup_voxel - (&vox_approach_distance*&cos35)
+'' m3 &x_pickup_voxel +  5, &y_pickup_voxel, &z_pickup_voxel  '' move close (+5mm in x)
+'' vs 2,2,2,2,10,10,10,10      '' reduce speed
+'' m3 &x_pickup_voxel, &y_pickup_voxel, &z_pickup_voxel       '' VOXEL pickup position
+'' FP, effector_gripperEngage.sbp,1,1,1,1,0
+'' m3 &x_pickup_voxel + (&vox_approach_distance*&cos35), &y_pickup_voxel, &z_pickup_voxel + (&vox_approach_distance*&cos35)     '' move out +xz@45 deg (slowly)
+'' vs 5,5,5,5,20,20,20,20      '' resume speed
+'' j5 &x_pickup_voxel + 50, &y_pickup_voxel, 0, 0, 0          '' VOXEL safe position (+50mm in x)
+'' END
 ''
 ''
 ''
 '' (OLD)
 ''' PICKUP VOXEL  offset +0.890, -1.780, -0.40
-'vs 5,5,5,5,20,20,20,20      '' resume speed
-'j5 110.065,228.7,0,0,0     '' VOXEL safe position
+''vs 5,5,5,5,20,20,20,20      '' resume speed
+''j5 110.065,228.7,0,0,0     '' VOXEL safe position
 '''
-'j3 110.065,228.7,-83.116,0,0     '' VOXEL safe position
-'m3 49.533, 228.7, -37.230       '' move close
-'vs 2,2,2,2,10,10,10,10      '' reduce speed
-'m3 44.533, 228.7, -37.230   '' VOXEL pickup position
-'pause 15
-'m3 69.108,228.7,-20.023     '' move out +xz (slowly)
-'vs 5,5,5,5,20,20,20,20      '' resume speed
-'j3 110.065,228.7,8.656      '' move out +xz
+''j3 110.065,228.7,-83.116,0,0     '' VOXEL safe position
+''m3 49.533, 228.7, -37.230       '' move close
+''vs 2,2,2,2,10,10,10,10      '' reduce speed
+''m3 44.533, 228.7, -37.230   '' VOXEL pickup position
+''pause 15
+''m3 69.108,228.7,-20.023     '' move out +xz (slowly)
+''vs 5,5,5,5,20,20,20,20      '' resume speed
+''j3 110.065,228.7,8.656      '' move out +xz
 '''
-'j5 110.065,228.7,0,0,0     '' VOXEL safe position
-'END
+''j5 110.065,228.7,0,0,0     '' VOXEL safe position
+''END
