@@ -18,6 +18,8 @@ EXAMPLE:
 	
 '''
 import sys
+import os
+import time
 
 if len(sys.argv)<3:
     print("not enough arguments passed")
@@ -25,26 +27,32 @@ if len(sys.argv)<3:
 filename = sys.argv[1]
 linenum = sys.argv[2]
 
-print filename
-print linenum
+# print filename
+# print linenum
 
-tmp_file_name = "at_line_" + str(linenum) + '_of_' + filename
-print tmp_file_name
+tmp_filename = "@line" + str(linenum) + '_' + filename
+# print tmp_filename
 
 tmp_file = []
+# reading file and collecting lines to be executed
 with open(filename,'r') as x:
     for l_num, each_line in enumerate(x):
-	    if l_num >= int(linenum):
+	    if l_num+1 >= int(linenum):
 			#print l_num+1, each_line  # +1 b/c l_num from enumerate starts with 0
 			tmp_file.append(each_line)
 
-with open(tmp_file_name,'w') as newfile:		
+# create temporary file to be executed
+with open(tmp_filename,'w') as newfile:
 	for each in tmp_file:
-		print each
+		# print each
 		newfile.write(each)
 		
+print tmp_filename + ' created'
 
-	
-	
-	
-	
+# execute file in shopbot
+cwd = os.getcwd()
+os.chdir("c:\\Program Files (x86)\\ShopBot\\ShopBot 3")       # directory for SB3.exe
+os.system('SB3.exe "' + cwd + "\\" + tmp_filename + '",1,5')  # argv[0] 1 = port; argv[1] 4 = move/cut no stop, 5 = preview no stop
+os.chdir(cwd)                                                 # changing back to working directory
+time.sleep(1)  # wait 1 second for command to make it to shopbot before deleting tmp file
+os.remove(tmp_filename)                                       # remove temporary file
