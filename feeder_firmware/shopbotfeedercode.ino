@@ -58,9 +58,9 @@ void setup() {
   digitalWrite(screwsleep, LOW);
   boltservo.attach(10);
   boltservo.write(70);
-  SerialUSB.begin(9600);
+  Serial.begin(9600);
 
-  SerialUSB.println("starting program...");
+  Serial.println("starting program...");
 }
 
  //////////////////////////////
@@ -104,7 +104,7 @@ void loop() {
       program_1 = false;}
   
     if (program_1 == true){
-      SerialUSB.println("Next Screw");
+      Serial.println("Next Screw");
       for (int i=0; i < 11; i++) {
         digitalWrite(screwsleep, HIGH);
         digitalWrite(dirbolt, LOW);
@@ -128,7 +128,7 @@ void loop() {
       program_2 = false;}
   
     if (program_2 == true){
-      SerialUSB.println("Next Voxel");
+      Serial.println("Next Voxel");
       for (int i=0; i < 50; i++) {
         digitalWrite(dirvox, LOW);
         digitalWrite(stumpvox,HIGH); 
@@ -150,7 +150,7 @@ void loop() {
       program_3 = false;}
   
     if (program_3 == true){
-      SerialUSB.println("Next Nut");
+      Serial.println("Next Nut");
       for (int i=0; i < 350; i++) {
         digitalWrite(dirnut, HIGH);
         digitalWrite(stumpnut,HIGH); 
@@ -172,7 +172,7 @@ void loop() {
       program_4 = false;}
   
     if (program_4 == true){
-      SerialUSB.println("Bolt Screw");
+      Serial.println("Bolt Screw");
       for (pos = 70; pos <= 95; pos += 1) { // goes from 0 degrees to 180 degrees
                                             // in steps of 1 degree
         boltservo.write(pos);              // tell servo to go to position in variable 'pos'
@@ -191,7 +191,7 @@ void loop() {
 //////////////////////////////
  
     if (buttonval == HIGH){
-      SerialUSB.println("Rewind Stack");
+      Serial.println("Rewind Stack");
       for (int i=0; i < 2100; i++) {
         digitalWrite(dirnut, LOW);        
         digitalWrite(stumpnut,HIGH); 
@@ -206,8 +206,8 @@ void loop() {
 /////Serial monitor values /////////////
 ////////////////////////////////////////
    
-  if(SerialUSB.available() > 0){
-      char c = SerialUSB.read();
+  if(Serial.available() > 0){
+      char c = Serial.read();
              
       //program 1
       if (c == 's'){
@@ -249,7 +249,7 @@ void loop() {
   
       //program 4
       if (c == 'b'){
-        SerialUSB.println("Bolt Screw");
+        Serial.println("Bolt Screw");
         for (pos = 70; pos <= 95; pos += 1) { // goes from 0 degrees to 180 degrees
                                               // in steps of 1 degree
           boltservo.write(pos);               // tell servo to go to position in variable 'pos'
@@ -263,7 +263,7 @@ void loop() {
   
       //program 5
       if (c == 'r'){
-        SerialUSB.println("Rewind Stack");
+        Serial.println("Rewind Stack");
         for (int i=0; i < 2100; i++) {
           digitalWrite(dirnut, LOW);        
           digitalWrite(stumpnut,HIGH); 
