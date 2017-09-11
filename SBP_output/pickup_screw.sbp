@@ -21,6 +21,7 @@ m3 &x_screw, &y_screw - &y_wiggle, &z_screw + 0.33  '' move down to screw dispen
 
 m3 &x_screw, &y_screw, &z_screw                    '' SCREW PICKUP LOCATION
 FP, load_bolt.sbp,1,1,1,1,0                '' bolt screw into jaw
+pause 1
 m3 &x_screw, &y_screw, &z_screw + 20       '' back out straight up for 20 mm
 j3 &x_screw + 30, &y_screw, &z_screw + 30  '' pull out to safe location
 END
