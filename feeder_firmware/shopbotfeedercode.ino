@@ -2,34 +2,34 @@
 #include <stdarg.h>
 #include <Arduino.h>
 
-void setup() {
-    // Mount the servos
-    Servo boltservo;
-    
-    // Output channels from the Shopbot
-    int shopbot_OP9 = A0;
-    int shopbot_OP10 = A1;
-    int shopbot_OP11 = A2;
-    int shopbot_OP12 = A3;
-    float sb09 = 0;
-    float sb10 = 0; 
-    float sb11 = 0; 
-    float sb12 = 0;
-    bool BUSY=false;
-    
-    // Stepper Motor Controllers
-    int dirbolt = 7;     // bolt direction (LOW = cclockwise(backwards))
-    int stumpbolt = 6;   // bolt step
-    int dirvox = 2;      // voxel direction
-    int stumpvox = 1;    // voxel step
-    int dirnut = 9;      // nut direction
-    int stumpnut = 8;    // nut step
-    int button = 3;      // dispense screw and nut
-    int buttonval;
-    int prevbuttonval;
-    int pos = 70;        // servo starting position
-    int screwsleep = 5;  //stepper motor low power mode
+// Mount the servos
+Servo boltservo;
 
+// Output channels from the Shopbot
+int shopbot_OP9 = A0;
+int shopbot_OP10 = A1;
+int shopbot_OP11 = A2;
+int shopbot_OP12 = A3;
+float sb09 = 0;
+float sb10 = 0; 
+float sb11 = 0; 
+float sb12 = 0;
+bool BUSY=false;
+
+// Stepper Motor Controllers
+int dirbolt = 7;     // bolt direction (LOW = cclockwise(backwards))
+int stumpbolt = 6;   // bolt step
+int dirvox = 2;      // voxel direction
+int stumpvox = 1;    // voxel step
+int dirnut = 9;      // nut direction
+int stumpnut = 8;    // nut step
+int button = 3;      // dispense screw and nut
+int buttonval;
+int prevbuttonval;
+int pos = 70;        // servo starting position
+int screwsleep = 5;  //stepper motor low power mode
+
+void setup() {
     // Set pin states
     pinMode(dirbolt, OUTPUT);
     pinMode(stumpbolt, OUTPUT);
@@ -47,7 +47,7 @@ void setup() {
     boltservo.write(70);
 
     Serial.begin(9600);
-
+	delay(2000);
     Serial.println("Starting program...");
 }
 
@@ -63,27 +63,27 @@ void loop() {
     // command from shopbot
     sb09 = analogRead(shopbot_OP9);
     
-    if (sb09 > 950 && BUSY==false) {       // if input pin 9 is high and shopbot is not busy
+    if (sb09 > 350 && BUSY==false) {       // if input pin 9 is high and shopbot is not busy
         BUSY=true;                         // shopbot is now busy
         // read the other input pins
         sb10 = analogRead(shopbot_OP10);
         sb11 = analogRead(shopbot_OP11);
         sb12 = analogRead(shopbot_OP12);
         
-        if (sb10 < 950 && sb11 > 950 && sb12 < 950) {       // 10,11,12 = 0,1,0
+        if (sb10 < 350 && sb11 > 350 && sb12 < 350) {       // 10,11,12 = 0,1,0
             load_nextScrew();
         }
-        else if (sb10 > 950 && sb11 < 950 && sb12 < 950) {  // 10,11,12 = 1,0,0
+        else if (sb10 > 350 && sb11 < 350 && sb12 < 350) {  // 10,11,12 = 1,0,0
             load_nextVoxel();
         }
-        else if (sb10 < 950 && sb11 < 950 && sb12 > 950) {  // 10,11,12 = 0,0,1
+        else if (sb10 < 350 && sb11 < 350 && sb12 > 350) {  // 10,11,12 = 0,0,1
             load_nextNut(); 
         }
-        else if (sb10 > 950 && sb11 > 950 && sb12 < 950) {  // 10,11,12 = 1,1,0
+        else if (sb10 > 350 && sb11 > 350 && sb12 < 350) {  // 10,11,12 = 1,1,0
             load_bolt();
         }
         else{
-            Serial.println("shopbot input signal not recognized")
+            Serial.println("shopbot input signal not recognized");
         }
         BUSY=false;
         delay(500); // shopbot trigger pin 9 only stays hight for 0.5 seconds 
@@ -111,7 +111,7 @@ void loop() {
                 load_rewindStack();
                 break;
             default:
-                Serial.println("keyboard serial input not recognized")
+                Serial.println("keyboard serial input not recognized");
         }
     }
 
