@@ -2,12 +2,12 @@
 * make GARI GUI
 * make a voxel map with sbp file to locate particular voxel
 * integrate pickup with build
-* shake after bolting
-* pause 0.5 at 3 mm out on nut pickup
 * test resume function
 
 # Completed:
 * make a script to resume build from (file, linenum) - 20170905 done
 * redo voxel pickup to only traverse in x axis - 20170905 done
 * change all pickup pause to 0.5 sec - 20170905 done
+* shake after bolting - 20170911 done
+* pause 0.5 at 3 mm out on nut pickup - 20170911 done
 

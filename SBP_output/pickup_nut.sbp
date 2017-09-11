@@ -27,6 +27,7 @@ vs 2,2,2,2,10,10,10,10      '' reduce speed
 m3 &x_pickup_nut + &x_offset, &y_pickup_nut + &y_offset, &z_pickup_nut + &z_offset               '' nut pickup position
 pause 0.5
 m3 &x_pickup_nut +  3 + &x_offset, &y_pickup_nut + &y_offset, &z_pickup_nut +  3 + &z_offset     '' move to closer safe nut position
+pause 0.5                   '' added 20170911 thinking wait will help nut to seat properly...
 vs 5,5,5,5,20,20,20,20      '' resume speed
 m3 &x_pickup_nut + 50 + &x_offset, &y_pickup_nut + &y_offset, &z_pickup_nut + 50 + &z_offset     '' move to safe nut position
 END
