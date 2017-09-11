@@ -1,0 +1,20 @@
+'' shake my
+&shake_amount = 1
+SR
+my,1*&shake_amount
+''
+my,-2*shake_amount
+my,2*shake_amount
+''
+my,-2*shake_amount
+my,2*shake_amount
+''
+my,-2*shake_amount
+my,2*shake_amount
+''
+my,-1*shake_amount
+''
+SA
+&shake_amount = 0
+''
+END
