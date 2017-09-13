@@ -35,14 +35,15 @@ cwd = os.getcwd()
 sb3_dir = "c:\\Program Files (x86)\\ShopBot\\ShopBot 3"
 
 if len(sys.argv)<2:
-    print("not enough arguments passed")
+    print("not enough arguments passed; exiting...")
+    sys.exit()
 
 filename = sys.argv[1]
 
-if len(sys.argv>2:
+if len(sys.argv)>2:
 	linenum = sys.argv[2]
 
-	tmp_filename = "@line" + str(linenum) + '_' + filename
+	tmp_filename = "atLine" + str(linenum) + '_' + filename
 	# print tmp_filename
 
 	tmp_file = []
@@ -63,13 +64,15 @@ if len(sys.argv>2:
 
 	# execute file in shopbot at particular line
 	os.chdir(sb3_dir)       # directory for SB3.exe
-	os.system('SB3.exe "' + cwd + "\\" + tmp_filename + '",1,5')  # argv[0] 1 = port; argv[1] 4 = move/cut no stop, 5 = preview no stop
+	os.system('SB3.exe "' + cwd + "\\" + tmp_filename + '",1,4')  # argv[0] 1 = port; argv[1] 4 = move/cut no stop, 5 = preview no stop
 	os.chdir(cwd)                                                 # changing back to working directory
-	time.sleep(1)  # wait 1 second for command to make it to shopbot before deleting tmp file
+	time.sleep(2)  # wait 5 second for command to make it to shopbot before deleting tmp file
 	os.remove(tmp_filename)                                       # remove temporary file
 else:
     # execute file
     os.chdir(sb3_dir)       # directory for SB3.exe
-	os.system('SB3.exe "' + cwd + "\\" + filename + '",1,5')      # argv[0] 1 = port; argv[1] 4 = move/cut no stop, 5 = preview no stop
-	os.chdir(cwd)                                                 # changing back to working directory
-	time.sleep(1)  # wait 1 second for command to make it to shopbot before deleting tmp file
+    os.system('SB3.exe "' + cwd + "\\" + filename + '",1,4')      # argv[0] 1 = port; argv[1] 4 = move/cut no stop, 5 = preview no stop
+	# changing back to working directory
+    os.chdir(cwd)
+    # wait 1 second for command to make it to shopbot before deleting tmp file
+    time.sleep(1)  

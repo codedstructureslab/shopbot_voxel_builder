@@ -28,7 +28,7 @@ PLACE_VOXEL_Y_4:
 FP, place_vox_m120.sbp,1,1,1,1,0
 MSGBOX(YES: BOLT_Y  NO: Do nothing,yesno,BOLT?  )
 IF &MSGANSWER = "YES" THEN FP, bolt.sbp,1,1,1,1,0
-FP, effector_jawOpen.sbp,1,1,1,1,0
+''FP, effector_jawOpen.sbp,1,1,1,1,0
 FP, effector_gripperDisengage.sbp,1,1,1,1,0
 MOVE_OUT_4:
 ''Ok to move out Baxis@-120?
@@ -78,7 +78,7 @@ PLACE_VOXEL_Z_7:
 FP, place_vox_0.sbp,1,1,1,1,0
 MSGBOX(YES: BOLT_Z  NO: Do nothing,yesno,BOLT?  )
 IF &MSGANSWER = "YES" THEN FP, bolt.sbp,1,1,1,1,0
-FP, effector_jawOpen.sbp,1,1,1,1,0
+''FP, effector_jawOpen.sbp,1,1,1,1,0
 FP, effector_gripperDisengage.sbp,1,1,1,1,0
 MOVE_OUT_7:
 ''Ok to move out B@0?
@@ -128,7 +128,7 @@ PLACE_VOXEL_Z_6:
 FP, place_vox_0.sbp,1,1,1,1,0
 MSGBOX(YES: BOLT_Z  NO: Do nothing,yesno,BOLT?  )
 IF &MSGANSWER = "YES" THEN FP, bolt.sbp,1,1,1,1,0
-FP, effector_jawOpen.sbp,1,1,1,1,0
+''FP, effector_jawOpen.sbp,1,1,1,1,0
 FP, effector_gripperDisengage.sbp,1,1,1,1,0
 MOVE_OUT_6:
 ''Ok to move out B@0?
@@ -179,7 +179,7 @@ PLACE_VOXEL_Z_8:
 FP, place_vox_0.sbp,1,1,1,1,0
 MSGBOX(YES: BOLT_Z  NO: Do nothing,yesno,BOLT?  )
 IF &MSGANSWER = "YES" THEN FP, bolt.sbp,1,1,1,1,0
-FP, effector_jawOpen.sbp,1,1,1,1,0
+''FP, effector_jawOpen.sbp,1,1,1,1,0
 FP, effector_gripperDisengage.sbp,1,1,1,1,0
 MOVE_OUT_8:
 ''Ok to move out B@0?

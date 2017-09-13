@@ -1,22 +1,33 @@
 Y_MOTION:
 my 5
 PRINT "my 5"
-my 10
-PRINT "my 10"
-my 0
-PRINT "my 0"
+''
+''
+''
+''
 ''Y_MOTION finished
 PAUSE
 
 X_MOTION:
 mx 5
 PRINT "mx 5"
-mx 10
-PRINT "mx 10"
-mx 0
-PRINT "mx 0"
+''
+''
+''
+''
+''X_MOTION finished
+PAUSE
+
+Z_MOTION:
+mz 5
+PRINT "mz 5"
+''
+''
+''
+''
 ''X_MOTION finished
 PAUSE
 
 END:
+m3 0,0,0
 PRINT "done"
