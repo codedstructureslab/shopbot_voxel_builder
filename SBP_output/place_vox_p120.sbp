@@ -17,8 +17,9 @@
 ''
 ''
 FP, effector_jawEnter.sbp,1,1,1,1,0
-j5 &current_vox_x + 0, &current_vox_y -50, &current_vox_z +50, 0, 120
-j3 &current_vox_x + 0, &current_vox_y -10, &current_vox_z +10
+j5 &current_vox_x - 2, &current_vox_y - 50, &current_vox_z + 50, 0, 120
+j3 &current_vox_x - 2, &current_vox_y - 10, &current_vox_z + 10
+m3 &current_vox_x - 2, &current_vox_y     , &current_vox_z
 m3 &current_vox_x, &current_vox_y, &current_vox_z
 ''
 END
