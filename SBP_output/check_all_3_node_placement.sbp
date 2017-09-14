@@ -1,0 +1,19 @@
+'' voxel position defined in variable
+''
+''
+FP, place_vox_0.sbp,1,1,1,1,0
+''check B@0
+PAUSE
+FP, release_vox_0.sbp, 1,1,1,1,0
+''
+FP, place_vox_m120.sbp,1,1,1,1,0
+''check B@-120
+PAUSE
+FP, release_vox_m120.sbp, 1,1,1,1,0
+''
+FP, place_vox_p120.sbp,1,1,1,1,0
+''check B@+120
+PAUSE
+FP, release_vox_p120.sbp, 1,1,1,1,0
+''
+END
