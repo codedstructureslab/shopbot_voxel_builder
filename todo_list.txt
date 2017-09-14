@@ -2,6 +2,7 @@
 * make GARI GUI
 * make a voxel map with sbp file to locate particular voxel
 * test resume function
+* get auto_vox.py to work
 
 # Completed:
 * make a script to resume build from (file, linenum) - 20170905 done
