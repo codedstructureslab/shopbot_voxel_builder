@@ -25,7 +25,7 @@ PRINT "mz 5"
 ''
 ''
 ''
-''X_MOTION finished
+''Z_MOTION finished
 PAUSE
 
 END:
