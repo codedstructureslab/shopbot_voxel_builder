@@ -52,14 +52,13 @@ def main():
     global SBP_output
     global output_fullpath_filename
     
-    if len(sys.argv) < 3:
-        print "ERROR - expecting 2 inputs: 1. geometry, 2. output filename; exiting..."
+    # checking inputs
+    if len(sys.argv) < 2:
+        print "ERROR - expecting input: geometry; exiting..."
         sys.exit()
     
-    print sys.argv[0]
-    print sys.argv[0]
-    print sys.argv[0]
-    output_fullpath_filename = '../SBP_output/testing.SBP'
+    input_geometry = sys.argv[1].split('/')[-1]
+    output_fullpath_filename = '../SBP_output/make_' + input_geometry + '.sbp'
     
     # user inputs
     seeded_num = 2                     # number of layers seeded; typically 2
@@ -73,31 +72,31 @@ def main():
     setup_shopbot_table()  # sets table offset and coordinate transformation
     plt.ion()              # interactive plotting; used so plt.pause will work
     
-    # sample voxel structures ------------------------------------------------------
-    v2x2 = np.ones((2,2,2))    # 3d square 2x2 voxel matrix (z,y,x)
-    v3x3 = np.ones((3,3,3))    # 3d sqaure 3x3 voxel matrix
-    v4x4 = np.ones((4,4,4))    # 3d sqaure 3x3 voxel matrix
-    v5x5 = np.ones((5,5,5))    # 3d sqaure 3x3 voxel matrix
-    v5x3x2 = np.ones((5,3,2))  # non-square vox structure
-    v3x3x12 = np.ones((3,3,12))
+    # # sample voxel structures ------------------------------------------------------
+    # v2x2 = np.ones((2,2,2))    # 3d square 2x2 voxel matrix (z,y,x)
+    # v3x3 = np.ones((3,3,3))    # 3d sqaure 3x3 voxel matrix
+    # v4x4 = np.ones((4,4,4))    # 3d sqaure 3x3 voxel matrix
+    # v5x5 = np.ones((5,5,5))    # 3d sqaure 3x3 voxel matrix
+    # v5x3x2 = np.ones((5,3,2))  # non-square vox structure
+    # v3x3x12 = np.ones((3,3,12))
     
-    vWing = np.ones((2,14,5))  # Wing vox structure
-    vWing[1,:,:] = 0 
-    vWing[1,:,1] = 1
+    # vWing = np.ones((2,14,5))  # Wing vox structure
+    # vWing[1,:,:] = 0 
+    # vWing[1,:,1] = 1
     
-    seed = [[[1, 1],[1, 0]],[[1, 0],[0,0]]]
+    # seed = [[[1, 1],[1, 0]],[[1, 0],[0,0]]]
     
-    hollow3x3 = copy.deepcopy(v3x3)   # 3d sqaure 3x3 voxel matrix
-    hollow3x3[1][1][1] = 0            # add hole
+    # hollow3x3 = copy.deepcopy(v3x3)   # 3d sqaure 3x3 voxel matrix
+    # hollow3x3[1][1][1] = 0            # add hole
         
-    v2x2_seeded = seeded(v2x2)
-    v3x3_seeded = seeded(v3x3)
+    # v2x2_seeded = seeded(v2x2)
+    # v3x3_seeded = seeded(v3x3)
     
-    v2x2_seeded7 = seeded7(v2x2)
-    # -------------------------------------------------------------------------------
+    # v2x2_seeded7 = seeded7(v2x2)
+    # # -------------------------------------------------------------------------------
     
     # input structure note: seeded is for visualization, build output assumes seeded_num (see code below)
-    input_vox_structure = v2x2  # <-------------------------- USER INPUT
+    input_vox_structure = input_geometry  # <-------------------------- USER INPUT
     
     # print input_vox_structure
     if show_vox_build_flag:
