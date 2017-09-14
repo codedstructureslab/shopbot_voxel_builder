@@ -5,7 +5,7 @@ pause 1 ''
 FP, effector_jawExit.sbp,1,1,1,1,0
 pause 1
 m3,-10,-10,5
-m3,-30,-30,35
+j3,-30,-30,35
 SA
 ''
 END
