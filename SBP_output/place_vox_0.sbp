@@ -16,6 +16,7 @@
 ''IF &current_vox_b < &lblim OR &current_vox_b > &hblim THEN PAUSE
 ''
 ''
+FP, effector_jawOpen.sbp,1,1,1,1,0
 j5 &current_vox_x -50, &current_vox_y -50, &current_vox_z +50, 0, 0
 j3 &current_vox_x -15, &current_vox_y -15, &current_vox_z +30
 j3 &current_vox_x -10, &current_vox_y -10, &current_vox_z +10
