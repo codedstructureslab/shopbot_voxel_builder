@@ -1,7 +1,6 @@
 # TODO:
 * make GARI GUI
 * make a voxel map with sbp file to locate particular voxel
-* test resume function
 * get auto_vox.py to work
 
 # Completed:
@@ -11,4 +10,5 @@
 * shake after bolting - 20170911 done
 * pause 0.5 at 3 mm out on nut pickup - 20170911 done
 * integrate pickup with build - 20170911 done
+* test resume function - 20170915 done
 

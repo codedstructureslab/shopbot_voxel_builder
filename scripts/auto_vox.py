@@ -26,6 +26,8 @@ import tkFileDialog                      # working with file browser
 import tkMessageBox                      # working with message boxes
 import os                                # working with file input/output
 import sys                               # working with input arguments
+import voxGeo                            # working with voxel geometry
+# import voxUtils                          # working with voxel utility functions # TODO: not yet implemented
 
 # # testing the waters with embedding figure into tkinter window such that text frame can later be added
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
@@ -53,12 +55,18 @@ def main():
     global output_fullpath_filename
     
     # checking inputs
-    if len(sys.argv) < 2:
-        print "ERROR - expecting input: geometry; exiting..."
+    if len(sys.argv) != 2:
+        print "ERROR - expecting input: geometry that is defined in geoVox.py; exiting..."
         sys.exit()
     
-    input_geometry = sys.argv[1].split('/')[-1]
-    output_fullpath_filename = '../SBP_output/make_' + input_geometry + '.sbp'
+    # checking voxGeo.py for voxel structure definitions
+    defined_voxel_structures = [x for x in dir(voxGeo) if x.startswith('v')]
+
+    geo_name = sys.argv[1].split('/')[-1]
+    if geo_name in defined_voxel_structures:
+        input_geometry = getattr(voxGeo, geo_name)
+    
+    output_fullpath_filename = '../SBP_output/make_' + geo_name + '.sbp'
     
     # user inputs
     seeded_num = 2                     # number of layers seeded; typically 2
@@ -391,7 +399,7 @@ def shp_reload_voxel():
     shp_pickup_screw()
     shp_pickup_nut()
     shp_pickup_voxel()
-    print 'ST'
+    SBP_output.append('ST\n')
     shp_reload()  # TODO: remove once pickup is ready...
 
     
@@ -402,7 +410,7 @@ def shp_reload_bolts():
     shp_move_pickup_loc()
     shp_pickup_screw()
     shp_pickup_nut()
-    print 'ST'
+    SBP_output.append('ST\n')
     shp_reload()  # TODO: remove once pickup is ready...
 
 
@@ -631,6 +639,7 @@ def save_SBP_output():
     with open(output_fullpath_filename,'w') as fileout:
         for each in SBP_output:
             fileout.write(each)
+    print output_fullpath_filename + ' created'
         
 
 def log():
