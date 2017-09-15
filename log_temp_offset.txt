@@ -8,4 +8,4 @@
 20170911 10:07 Temp: 78 deg
 20170913 10:05 Temp: 77 deg offset: x0.4, y0, z-0.4
 20170914 10:08 Temp: 77 deg offset: x-0.2, y0.6, z-0.8; zeroing to plate, prior voxel is lifted slightly
-20170915 09:45 Temp: 72 deg offset: x0.6, y-.8, z-.4
+20170915 09:45 Temp: 72 deg offset: x0.6, y-.8, z-.4; still off, adjusted another x0.2, y0.4, z0
