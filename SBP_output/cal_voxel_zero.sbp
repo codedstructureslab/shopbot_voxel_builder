@@ -1,3 +1,17 @@
-&X_voxel_zero = -255.275 ''''20170503 (-.205,-.409,0)
-&Y_voxel_zero = -465.251 
-&Z_voxel_zero =  481.000
+&X_voxel_zero = -256.075 
+&Y_voxel_zero = -464.850 
+&Z_voxel_zero =  481.400
+''
+'' to recalibrate; 
+''   1. goto zero location;
+''   2. subtrack numbers seen in shopbot position from numbers above
+''20170915 (0.2,0.4,0)
+''&X_voxel_zero = -255.875 
+''&Y_voxel_zero = -464.450 
+''&Z_voxel_zero =  481.400
+''20170915 (0.6,-0.8,-0.4)
+''&X_voxel_zero = -255.275 
+''&Y_voxel_zero = -465.251 
+''&Z_voxel_zero =  481.000
+
+''20170503 (-.205,-.409,0)
