@@ -26,7 +26,7 @@ PRINT "PLACE_VOXEL_Y_7:"
 PLACE_VOXEL_Y_7:
 FP, place_vox_m120.sbp,1,1,1,1,0
 FP, bolt.sbp,1,1,1,1,0
-FP, effector_jawOpen.sbp,1,1,1,1,0
+''FP, effector_jawOpen.sbp,1,1,1,1,0
 FP, effector_gripperDisengage.sbp,1,1,1,1,0
 MOVE_OUT_7:
 ''Ok to move out Baxis@-120?
@@ -53,7 +53,7 @@ PRINT "PLACE_VOXEL_Y_5:"
 PLACE_VOXEL_Y_5:
 FP, place_vox_m120.sbp,1,1,1,1,0
 FP, bolt.sbp,1,1,1,1,0
-FP, effector_jawOpen.sbp,1,1,1,1,0
+''FP, effector_jawOpen.sbp,1,1,1,1,0
 FP, effector_gripperDisengage.sbp,1,1,1,1,0
 MOVE_OUT_5:
 ''Ok to move out Baxis@-120?
@@ -101,7 +101,7 @@ PRINT "PLACE_VOXEL_X_3:"
 PLACE_VOXEL_X_3:
 FP, place_vox_p120.sbp,1,1,1,1,0
 FP, bolt.sbp,1,1,1,1,0
-FP, effector_jawOpen.sbp,1,1,1,1,0
+''FP, effector_jawOpen.sbp,1,1,1,1,0
 FP, effector_gripperDisengage.sbp,1,1,1,1,0
 MOVE_OUT_3:
 ''Ok to move out Baxis@+120?
@@ -128,7 +128,7 @@ PRINT "PLACE_VOXEL_Z_13:"
 PLACE_VOXEL_Z_13:
 FP, place_vox_0.sbp,1,1,1,1,0
 FP, bolt.sbp,1,1,1,1,0
-FP, effector_jawOpen.sbp,1,1,1,1,0
+''FP, effector_jawOpen.sbp,1,1,1,1,0
 FP, effector_gripperDisengage.sbp,1,1,1,1,0
 MOVE_OUT_13:
 ''Ok to move out B@0?
@@ -177,7 +177,7 @@ PRINT "PLACE_VOXEL_Z_11:"
 PLACE_VOXEL_Z_11:
 FP, place_vox_0.sbp,1,1,1,1,0
 FP, bolt.sbp,1,1,1,1,0
-FP, effector_jawOpen.sbp,1,1,1,1,0
+''FP, effector_jawOpen.sbp,1,1,1,1,0
 FP, effector_gripperDisengage.sbp,1,1,1,1,0
 MOVE_OUT_11:
 ''Ok to move out B@0?
@@ -225,7 +225,7 @@ PRINT "PLACE_VOXEL_Z_19:"
 PLACE_VOXEL_Z_19:
 FP, place_vox_0.sbp,1,1,1,1,0
 FP, bolt.sbp,1,1,1,1,0
-FP, effector_jawOpen.sbp,1,1,1,1,0
+''FP, effector_jawOpen.sbp,1,1,1,1,0
 FP, effector_gripperDisengage.sbp,1,1,1,1,0
 MOVE_OUT_19:
 ''Ok to move out B@0?
@@ -252,7 +252,7 @@ PRINT "PLACE_VOXEL_Y_8:"
 PLACE_VOXEL_Y_8:
 FP, place_vox_m120.sbp,1,1,1,1,0
 FP, bolt.sbp,1,1,1,1,0
-FP, effector_jawOpen.sbp,1,1,1,1,0
+''FP, effector_jawOpen.sbp,1,1,1,1,0
 FP, effector_gripperDisengage.sbp,1,1,1,1,0
 MOVE_OUT_8:
 ''Ok to move out Baxis@-120?
@@ -301,7 +301,7 @@ PRINT "PLACE_VOXEL_Y_6:"
 PLACE_VOXEL_Y_6:
 FP, place_vox_m120.sbp,1,1,1,1,0
 FP, bolt.sbp,1,1,1,1,0
-FP, effector_jawOpen.sbp,1,1,1,1,0
+''FP, effector_jawOpen.sbp,1,1,1,1,0
 FP, effector_gripperDisengage.sbp,1,1,1,1,0
 MOVE_OUT_6:
 ''Ok to move out Baxis@-120?
@@ -350,7 +350,7 @@ PRINT "PLACE_VOXEL_Z_16:"
 PLACE_VOXEL_Z_16:
 FP, place_vox_0.sbp,1,1,1,1,0
 FP, bolt.sbp,1,1,1,1,0
-FP, effector_jawOpen.sbp,1,1,1,1,0
+''FP, effector_jawOpen.sbp,1,1,1,1,0
 FP, effector_gripperDisengage.sbp,1,1,1,1,0
 MOVE_OUT_16:
 ''Ok to move out B@0?
@@ -400,7 +400,7 @@ PRINT "PLACE_VOXEL_Z_14:"
 PLACE_VOXEL_Z_14:
 FP, place_vox_0.sbp,1,1,1,1,0
 FP, bolt.sbp,1,1,1,1,0
-FP, effector_jawOpen.sbp,1,1,1,1,0
+''FP, effector_jawOpen.sbp,1,1,1,1,0
 FP, effector_gripperDisengage.sbp,1,1,1,1,0
 MOVE_OUT_14:
 ''Ok to move out B@0?
@@ -471,7 +471,7 @@ PRINT "PLACE_VOXEL_Z_12:"
 PLACE_VOXEL_Z_12:
 FP, place_vox_0.sbp,1,1,1,1,0
 FP, bolt.sbp,1,1,1,1,0
-FP, effector_jawOpen.sbp,1,1,1,1,0
+''FP, effector_jawOpen.sbp,1,1,1,1,0
 FP, effector_gripperDisengage.sbp,1,1,1,1,0
 MOVE_OUT_12:
 ''Ok to move out B@0?
@@ -520,7 +520,7 @@ PRINT "PLACE_VOXEL_Z_22:"
 PLACE_VOXEL_Z_22:
 FP, place_vox_0.sbp,1,1,1,1,0
 FP, bolt.sbp,1,1,1,1,0
-FP, effector_jawOpen.sbp,1,1,1,1,0
+''FP, effector_jawOpen.sbp,1,1,1,1,0
 FP, effector_gripperDisengage.sbp,1,1,1,1,0
 MOVE_OUT_22:
 ''Ok to move out B@0?
@@ -569,7 +569,7 @@ PRINT "PLACE_VOXEL_Z_20:"
 PLACE_VOXEL_Z_20:
 FP, place_vox_0.sbp,1,1,1,1,0
 FP, bolt.sbp,1,1,1,1,0
-FP, effector_jawOpen.sbp,1,1,1,1,0
+''FP, effector_jawOpen.sbp,1,1,1,1,0
 FP, effector_gripperDisengage.sbp,1,1,1,1,0
 MOVE_OUT_20:
 ''Ok to move out B@0?
@@ -618,7 +618,7 @@ PRINT "PLACE_VOXEL_Y_9:"
 PLACE_VOXEL_Y_9:
 FP, place_vox_m120.sbp,1,1,1,1,0
 FP, bolt.sbp,1,1,1,1,0
-FP, effector_jawOpen.sbp,1,1,1,1,0
+''FP, effector_jawOpen.sbp,1,1,1,1,0
 FP, effector_gripperDisengage.sbp,1,1,1,1,0
 MOVE_OUT_9:
 ''Ok to move out Baxis@-120?
@@ -668,7 +668,7 @@ PRINT "PLACE_VOXEL_Z_17:"
 PLACE_VOXEL_Z_17:
 FP, place_vox_0.sbp,1,1,1,1,0
 FP, bolt.sbp,1,1,1,1,0
-FP, effector_jawOpen.sbp,1,1,1,1,0
+''FP, effector_jawOpen.sbp,1,1,1,1,0
 FP, effector_gripperDisengage.sbp,1,1,1,1,0
 MOVE_OUT_17:
 ''Ok to move out B@0?
@@ -740,7 +740,7 @@ PRINT "PLACE_VOXEL_Z_15:"
 PLACE_VOXEL_Z_15:
 FP, place_vox_0.sbp,1,1,1,1,0
 FP, bolt.sbp,1,1,1,1,0
-FP, effector_jawOpen.sbp,1,1,1,1,0
+''FP, effector_jawOpen.sbp,1,1,1,1,0
 FP, effector_gripperDisengage.sbp,1,1,1,1,0
 MOVE_OUT_15:
 ''Ok to move out B@0?
@@ -811,7 +811,7 @@ PRINT "PLACE_VOXEL_Z_25:"
 PLACE_VOXEL_Z_25:
 FP, place_vox_0.sbp,1,1,1,1,0
 FP, bolt.sbp,1,1,1,1,0
-FP, effector_jawOpen.sbp,1,1,1,1,0
+''FP, effector_jawOpen.sbp,1,1,1,1,0
 FP, effector_gripperDisengage.sbp,1,1,1,1,0
 MOVE_OUT_25:
 ''Ok to move out B@0?
@@ -861,7 +861,7 @@ PRINT "PLACE_VOXEL_Z_23:"
 PLACE_VOXEL_Z_23:
 FP, place_vox_0.sbp,1,1,1,1,0
 FP, bolt.sbp,1,1,1,1,0
-FP, effector_jawOpen.sbp,1,1,1,1,0
+''FP, effector_jawOpen.sbp,1,1,1,1,0
 FP, effector_gripperDisengage.sbp,1,1,1,1,0
 MOVE_OUT_23:
 ''Ok to move out B@0?
@@ -932,7 +932,7 @@ PRINT "PLACE_VOXEL_Z_21:"
 PLACE_VOXEL_Z_21:
 FP, place_vox_0.sbp,1,1,1,1,0
 FP, bolt.sbp,1,1,1,1,0
-FP, effector_jawOpen.sbp,1,1,1,1,0
+''FP, effector_jawOpen.sbp,1,1,1,1,0
 FP, effector_gripperDisengage.sbp,1,1,1,1,0
 MOVE_OUT_21:
 ''Ok to move out B@0?
@@ -982,7 +982,7 @@ PRINT "PLACE_VOXEL_Z_18:"
 PLACE_VOXEL_Z_18:
 FP, place_vox_0.sbp,1,1,1,1,0
 FP, bolt.sbp,1,1,1,1,0
-FP, effector_jawOpen.sbp,1,1,1,1,0
+''FP, effector_jawOpen.sbp,1,1,1,1,0
 FP, effector_gripperDisengage.sbp,1,1,1,1,0
 MOVE_OUT_18:
 ''Ok to move out B@0?
@@ -1054,7 +1054,7 @@ PRINT "PLACE_VOXEL_Z_26:"
 PLACE_VOXEL_Z_26:
 FP, place_vox_0.sbp,1,1,1,1,0
 FP, bolt.sbp,1,1,1,1,0
-FP, effector_jawOpen.sbp,1,1,1,1,0
+''FP, effector_jawOpen.sbp,1,1,1,1,0
 FP, effector_gripperDisengage.sbp,1,1,1,1,0
 MOVE_OUT_26:
 ''Ok to move out B@0?
@@ -1126,7 +1126,7 @@ PRINT "PLACE_VOXEL_Z_24:"
 PLACE_VOXEL_Z_24:
 FP, place_vox_0.sbp,1,1,1,1,0
 FP, bolt.sbp,1,1,1,1,0
-FP, effector_jawOpen.sbp,1,1,1,1,0
+''FP, effector_jawOpen.sbp,1,1,1,1,0
 FP, effector_gripperDisengage.sbp,1,1,1,1,0
 MOVE_OUT_24:
 ''Ok to move out B@0?
@@ -1198,7 +1198,7 @@ PRINT "PLACE_VOXEL_Z_27:"
 PLACE_VOXEL_Z_27:
 FP, place_vox_0.sbp,1,1,1,1,0
 FP, bolt.sbp,1,1,1,1,0
-FP, effector_jawOpen.sbp,1,1,1,1,0
+''FP, effector_jawOpen.sbp,1,1,1,1,0
 FP, effector_gripperDisengage.sbp,1,1,1,1,0
 MOVE_OUT_27:
 ''Ok to move out B@0?
