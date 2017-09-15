@@ -1248,6 +1248,7 @@ MOVE_OUT_p120_27:
 ''Ok to move out B@+120?
 PAUSE
 FP, release_vox_p120.sbp, 1,1,1,1,0
+JB 0
 PRINT "End Time:"
 PRINT %(146); " "; %(147)
 ''
