@@ -1,17 +1,9 @@
 # sbp_run.py
 '''
 DESCRIPTION: 
-    Originally, resume_at_line.py was written to run a file at a particular line
-    for the purpose of resuming a file that was ended with a kill switch.
-    
-    This is expaned in sbp_run.py to run an arbitrary file with an optional input
-    of line number.
-    
-    resume_at_line.py:
-    takes in a file and line number and creates a temporary
-    file that starts at specified line number.
-             
-    The objective is to resume a build file that was interupted by a kill switch.
+    sbp_run.py runs a file with an optional input of line_number.
+        
+    This function is used to resume a build file that was interupted by a kill switch.
     After the kill switch is initiated, shopbot program will notify operator of 
     the last line number executed.
              
@@ -19,50 +11,38 @@ DESCRIPTION:
     to resume running.
              
 USAGE:
-    python run.py <filename> <(optional)line_number>
-    (old) python resumet_at_line.py <filename> <line_number>             
+    python sbp_run.py <filename> <(optional)line_number>      
              
 EXAMPLE:
     python test_resume_at_line_num.sbp 10
-    (old) python resume_at_line.py test_resume_at_line_num.sbp 10
-    
 '''
 import sys
 import os
 import time
-from Tkinter import Tk
-from tkFileDialog import askopenfilename
-
-root = Tk()
-root.withdraw()
 
 cwd = os.getcwd()
 shopbot_dir = "c:\\Program Files (x86)\\ShopBot\\ShopBot 3"
-shopbot_mode = str(5)  # 4 = move/cut (no stop), 5 = preview (no stop)
+shopbot_mode = str(4)  # 4 = move/cut (no stop), 5 = preview (no stop)
 
 # # handling inputs
 filename = ''
 linenum = ''
 if len(sys.argv)==1:
-    print("no arguments passed; expecting filename and line number; using file browser...")
-    filename = askopenfilename()
+    print("no arguments passed; expecting filename and line number;")
     if not filename:
-        print("no input filename; exiting")
+        print("no input filename; exiting..")
         sys.exit()
-    linenum = input('Enter starting line you wish to resume at: ')
 else:
     try:
         filename = sys.argv[1]
     except:
-        print("no file found")
+        print("no file input; exiting...")
+        sys.exit()
     try:
         linenum = sys.argv[2]
     except:
-        print("no line number passed")
-
-# removing tk window so it won't conflict with shopbot dialog boxes
-root.deiconify()
-root.destroy()
+        print("no line number input; exiting...")
+        sys.exit()
 
 
 if filename and linenum:
@@ -89,7 +69,7 @@ if filename and linenum:
     os.chdir(shopbot_dir)       # directory for SB3.exe
     os.system('SB3.exe "' + cwd + "\\" + tmp_filename + '",1,' + shopbot_mode)
     os.chdir(cwd)               # changing back to working directory
-    time.sleep(2)               # wait 5 second for command to make it to shopbot before deleting tmp file
+    time.sleep(5)               # wait 5 second for command to make it to shopbot before deleting tmp file
     os.remove(tmp_filename)     # remove temporary file
     print('completed')
 elif filename:
