@@ -46,7 +46,7 @@ else:
 
 
 if filename and linenum:
-    tmp_filename = "atLine" + str(linenum) + '_' + filename.split('/')[-1].split('.')[0] + 'tmp_sbp'
+    tmp_filename = "atLine" + str(linenum) + '_' + filename.split('/')[-1].split('.')[0] + '.tmp_sbp'
     # print tmp_filename
 
     tmp_file = []
@@ -69,7 +69,7 @@ if filename and linenum:
     os.chdir(shopbot_dir)       # directory for SB3.exe
     os.system('SB3.exe "' + cwd + "\\" + tmp_filename + '",1,' + shopbot_mode)
     os.chdir(cwd)               # changing back to working directory
-    time.sleep(5)               # wait 5 second for command to make it to shopbot before deleting tmp file
+    time.sleep(10)               # wait 5 second for command to make it to shopbot before deleting tmp file
     os.remove(tmp_filename)     # remove temporary file
     print('completed')
 elif filename:
