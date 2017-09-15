@@ -22,7 +22,6 @@ j3 &current_vox_x -10, &current_vox_y -10, &current_vox_z +10
 m3 &current_vox_x -8, &current_vox_y -8, &current_vox_z +8
 '' 20170901: Issue with stinger hitting bottom; below changed position was made
 FP, effector_jawEnter.sbp,1,1,1,1,0
-m3 &current_vox_x, &current_vox_y, &current_vox_z + 2
 m3 &current_vox_x, &current_vox_y, &current_vox_z
 ''
 END
