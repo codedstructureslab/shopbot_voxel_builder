@@ -46,7 +46,7 @@ else:
 
 
 if filename and linenum:
-    tmp_filename = "atLine" + str(linenum) + '_' + filename.split('/')[-1]
+    tmp_filename = "atLine" + str(linenum) + '_' + filename.split('/')[-1].split('.')[0] + 'tmp_sbp'
     # print tmp_filename
 
     tmp_file = []
