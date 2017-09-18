@@ -67,8 +67,8 @@ ATTACH_X_5:
 PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
-MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &MSGANSWER = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
+''MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
+''IF &MSGANSWER = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 MOVE_BOLT_PX:
@@ -142,8 +142,8 @@ ATTACH_Y_13:
 PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
-MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &MSGANSWER = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
+''MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
+''IF &MSGANSWER = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 MOVE_BOLT_PY:
@@ -191,8 +191,8 @@ ATTACH_X_11:
 PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
-MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &MSGANSWER = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
+''MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
+''IF &MSGANSWER = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 MOVE_BOLT_PX:
@@ -266,8 +266,8 @@ ATTACH_X_8:
 PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
-MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &MSGANSWER = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
+''MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
+''IF &MSGANSWER = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 MOVE_BOLT_PX:
@@ -315,8 +315,8 @@ ATTACH_X_6:
 PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
-MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &MSGANSWER = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
+''MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
+''IF &MSGANSWER = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 MOVE_BOLT_PX:
@@ -364,8 +364,8 @@ ATTACH_Y_16:
 PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
-MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &MSGANSWER = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
+''MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
+''IF &MSGANSWER = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 MOVE_BOLT_PY:
@@ -414,8 +414,8 @@ ATTACH_Y_14:
 PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
-MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &MSGANSWER = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
+''MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
+''IF &MSGANSWER = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 MOVE_BOLT_PY:
@@ -436,8 +436,8 @@ ATTACH_X_14:
 PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
-MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &MSGANSWER = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
+''MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
+''IF &MSGANSWER = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 MOVE_BOLT_PX:
@@ -485,8 +485,8 @@ ATTACH_X_12:
 PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
-MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &MSGANSWER = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
+''MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
+''IF &MSGANSWER = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 MOVE_BOLT_PX:
@@ -534,8 +534,8 @@ ATTACH_Y_22:
 PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
-MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &MSGANSWER = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
+''MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
+''IF &MSGANSWER = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 MOVE_BOLT_PY:
@@ -583,8 +583,8 @@ ATTACH_X_20:
 PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
-MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &MSGANSWER = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
+''MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
+''IF &MSGANSWER = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 MOVE_BOLT_PX:
@@ -632,8 +632,8 @@ ATTACH_X_9:
 PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
-MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &MSGANSWER = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
+''MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
+''IF &MSGANSWER = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 MOVE_BOLT_PX:
@@ -682,8 +682,8 @@ ATTACH_Y_17:
 PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
-MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &MSGANSWER = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
+''MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
+''IF &MSGANSWER = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 MOVE_BOLT_PY:
@@ -704,8 +704,8 @@ ATTACH_X_17:
 PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
-MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &MSGANSWER = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
+''MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
+''IF &MSGANSWER = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 MOVE_BOLT_PX:
@@ -754,8 +754,8 @@ ATTACH_Y_15:
 PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
-MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &MSGANSWER = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
+''MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
+''IF &MSGANSWER = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 MOVE_BOLT_PY:
@@ -776,8 +776,8 @@ ATTACH_X_15:
 PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
-MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &MSGANSWER = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
+''MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
+''IF &MSGANSWER = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 MOVE_BOLT_PX:
@@ -825,8 +825,8 @@ ATTACH_Y_25:
 PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
-MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &MSGANSWER = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
+''MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
+''IF &MSGANSWER = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 MOVE_BOLT_PY:
@@ -875,8 +875,8 @@ ATTACH_Y_23:
 PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
-MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &MSGANSWER = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
+''MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
+''IF &MSGANSWER = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 MOVE_BOLT_PY:
@@ -897,8 +897,8 @@ ATTACH_X_23:
 PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
-MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &MSGANSWER = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
+''MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
+''IF &MSGANSWER = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 MOVE_BOLT_PX:
@@ -946,8 +946,8 @@ ATTACH_X_21:
 PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
-MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &MSGANSWER = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
+''MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
+''IF &MSGANSWER = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 MOVE_BOLT_PX:
@@ -996,8 +996,8 @@ ATTACH_Y_18:
 PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
-MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &MSGANSWER = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
+''MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
+''IF &MSGANSWER = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 MOVE_BOLT_PY:
@@ -1018,8 +1018,8 @@ ATTACH_X_18:
 PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
-MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &MSGANSWER = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
+''MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
+''IF &MSGANSWER = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 MOVE_BOLT_PX:
@@ -1068,8 +1068,8 @@ ATTACH_Y_26:
 PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
-MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &MSGANSWER = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
+''MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
+''IF &MSGANSWER = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 MOVE_BOLT_PY:
@@ -1090,8 +1090,8 @@ ATTACH_X_26:
 PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
-MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &MSGANSWER = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
+''MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
+''IF &MSGANSWER = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 MOVE_BOLT_PX:
@@ -1140,8 +1140,8 @@ ATTACH_Y_24:
 PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
-MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &MSGANSWER = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
+''MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
+''IF &MSGANSWER = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 MOVE_BOLT_PY:
@@ -1162,8 +1162,8 @@ ATTACH_X_24:
 PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
-MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &MSGANSWER = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
+''MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
+''IF &MSGANSWER = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 MOVE_BOLT_PX:
@@ -1212,8 +1212,8 @@ ATTACH_Y_27:
 PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
-MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &MSGANSWER = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
+''MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
+''IF &MSGANSWER = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 MOVE_BOLT_PY:
@@ -1234,8 +1234,8 @@ ATTACH_X_27:
 PRINT "RELOAD_PAUSE"
 J5 -130,-300,170,0,0
 FP, effector_jawOpen.sbp,1,1,1,1,0
-MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
-IF &MSGANSWER = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
+''MSGBOX(YES: Engage Gripper  NO: Do nothing,yesno,Engage Gripper?  )
+''IF &MSGANSWER = "YES" THEN FP, effector_gripperEngage.sbp,1,1,1,1,0
 ''Finished screw/nut feed?
 PAUSE
 MOVE_BOLT_PX:
