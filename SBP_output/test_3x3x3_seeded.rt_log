@@ -1,0 +1,231 @@
+Start Date Time:
+Monday, September 18, 2017 10:37:32
+RELOAD_PAUSE
+NEXT VOXEL: 7 at [76.2 -76.2 -76.2] <-------------------------- VOXEL
+ATTACH voxel: 7 to 4 at y
+10:38:02
+PLACE_VOXEL_Y_7:
+RELOAD_PAUSE
+NEXT VOXEL: 5 at [0.0 0.0 -76.2] <-------------------------- VOXEL
+ATTACH voxel: 5 to 2 at y
+ATTACH voxel: 5 to 4 at x
+10:39:39
+PLACE_VOXEL_Y_5:
+10:40:43
+ATTACH_X_5:
+RELOAD_PAUSE
+RELOAD_PAUSE
+NEXT VOXEL: 3 at [-76.2 76.2 -76.2] <-------------------------- VOXEL
+ATTACH voxel: 3 to 2 at x
+10:47:17
+PLACE_VOXEL_X_3:
+RELOAD_PAUSE
+NEXT VOXEL: 13 at [76.2 0.0 0.0] <-------------------------- VOXEL
+ATTACH voxel: 13 to 4 at -z
+ATTACH voxel: 13 to 10 at y
+10:48:55
+PLACE_VOXEL_Z_13:
+10:50:03
+ATTACH_Y_13:
+RELOAD_PAUSE
+RELOAD_PAUSE
+NEXT VOXEL: 11 at [0.0 76.2 0.0] <-------------------------- VOXEL
+ATTACH voxel: 11 to 2 at -z
+ATTACH voxel: 11 to 10 at x
+10:52:20
+PLACE_VOXEL_Z_11:
+10:53:30
+ATTACH_X_11:
+RELOAD_PAUSE
+RELOAD_PAUSE
+NEXT VOXEL: 19 at [76.2 76.2 76.2] <-------------------------- VOXEL
+ATTACH voxel: 19 to 10 at -z
+10:55:25
+PLACE_VOXEL_Z_19:
+RELOAD_PAUSE
+NEXT VOXEL: 8 at [0.0 -76.2 -76.2] <-------------------------- VOXEL
+ATTACH voxel: 8 to 5 at y
+ATTACH voxel: 8 to 7 at x
+10:57:44
+PLACE_VOXEL_Y_8:
+10:58:55
+ATTACH_X_8:
+RELOAD_PAUSE
+RELOAD_PAUSE
+NEXT VOXEL: 6 at [-76.2 0.0 -76.2] <-------------------------- VOXEL
+ATTACH voxel: 6 to 3 at y
+ATTACH voxel: 6 to 5 at x
+11:00:52
+PLACE_VOXEL_Y_6:
+11:01:54
+ATTACH_X_6:
+RELOAD_PAUSE
+RELOAD_PAUSE
+NEXT VOXEL: 16 at [76.2 -76.2 0.0] <-------------------------- VOXEL
+ATTACH voxel: 16 to 7 at -z
+ATTACH voxel: 16 to 13 at y
+11:03:35
+PLACE_VOXEL_Z_16:
+11:04:40
+ATTACH_Y_16:
+RELOAD_PAUSE
+RELOAD_PAUSE
+NEXT VOXEL: 14 at [0.0 0.0 0.0] <-------------------------- VOXEL
+ATTACH voxel: 14 to 5 at -z
+ATTACH voxel: 14 to 11 at y
+ATTACH voxel: 14 to 13 at x
+11:06:30
+PLACE_VOXEL_Z_14:
+11:07:37
+ATTACH_Y_14:
+RELOAD_PAUSE
+11:09:03
+ATTACH_X_14:
+RELOAD_PAUSE
+RELOAD_PAUSE
+NEXT VOXEL: 12 at [-76.2 76.2 0.0] <-------------------------- VOXEL
+ATTACH voxel: 12 to 3 at -z
+ATTACH voxel: 12 to 11 at x
+11:10:48
+PLACE_VOXEL_Z_12:
+11:11:55
+ATTACH_X_12:
+RELOAD_PAUSE
+RELOAD_PAUSE
+NEXT VOXEL: 22 at [76.2 0.0 76.2] <-------------------------- VOXEL
+ATTACH voxel: 22 to 13 at -z
+ATTACH voxel: 22 to 19 at y
+11:13:37
+PLACE_VOXEL_Z_22:
+11:14:43
+ATTACH_Y_22:
+RELOAD_PAUSE
+RELOAD_PAUSE
+NEXT VOXEL: 20 at [0.0 76.2 76.2] <-------------------------- VOXEL
+ATTACH voxel: 20 to 11 at -z
+ATTACH voxel: 20 to 19 at x
+11:16:37
+PLACE_VOXEL_Z_20:
+11:17:45
+ATTACH_X_20:
+RELOAD_PAUSE
+RELOAD_PAUSE
+NEXT VOXEL: 9 at [-76.2 -76.2 -76.2] <-------------------------- VOXEL
+ATTACH voxel: 9 to 6 at y
+ATTACH voxel: 9 to 8 at x
+11:19:46
+PLACE_VOXEL_Y_9:
+11:20:49
+ATTACH_X_9:
+RELOAD_PAUSE
+RELOAD_PAUSE
+NEXT VOXEL: 17 at [0.0 -76.2 0.0] <-------------------------- VOXEL
+ATTACH voxel: 17 to 8 at -z
+ATTACH voxel: 17 to 14 at y
+ATTACH voxel: 17 to 16 at x
+11:22:29
+PLACE_VOXEL_Z_17:
+11:23:34
+ATTACH_Y_17:
+RELOAD_PAUSE
+11:24:46
+ATTACH_X_17:
+RELOAD_PAUSE
+RELOAD_PAUSE
+NEXT VOXEL: 15 at [-76.2 0.0 0.0] <-------------------------- VOXEL
+ATTACH voxel: 15 to 6 at -z
+ATTACH voxel: 15 to 12 at y
+ATTACH voxel: 15 to 14 at x
+11:26:30
+PLACE_VOXEL_Z_15:
+11:27:36
+ATTACH_Y_15:
+RELOAD_PAUSE
+11:28:54
+ATTACH_X_15:
+RELOAD_PAUSE
+RELOAD_PAUSE
+NEXT VOXEL: 25 at [76.2 -76.2 76.2] <-------------------------- VOXEL
+ATTACH voxel: 25 to 16 at -z
+ATTACH voxel: 25 to 22 at y
+11:30:29
+PLACE_VOXEL_Z_25:
+11:31:35
+ATTACH_Y_25:
+RELOAD_PAUSE
+RELOAD_PAUSE
+NEXT VOXEL: 23 at [0.0 0.0 76.2] <-------------------------- VOXEL
+ATTACH voxel: 23 to 14 at -z
+ATTACH voxel: 23 to 20 at y
+ATTACH voxel: 23 to 22 at x
+11:33:30
+PLACE_VOXEL_Z_23:
+11:34:36
+ATTACH_Y_23:
+RELOAD_PAUSE
+11:35:50
+ATTACH_X_23:
+RELOAD_PAUSE
+RELOAD_PAUSE
+NEXT VOXEL: 21 at [-76.2 76.2 76.2] <-------------------------- VOXEL
+ATTACH voxel: 21 to 12 at -z
+ATTACH voxel: 21 to 20 at x
+11:37:32
+PLACE_VOXEL_Z_21:
+11:38:40
+ATTACH_X_21:
+RELOAD_PAUSE
+RELOAD_PAUSE
+NEXT VOXEL: 18 at [-76.2 -76.2 0.0] <-------------------------- VOXEL
+ATTACH voxel: 18 to 9 at -z
+ATTACH voxel: 18 to 15 at y
+ATTACH voxel: 18 to 17 at x
+11:40:28
+PLACE_VOXEL_Z_18:
+11:41:31
+ATTACH_Y_18:
+RELOAD_PAUSE
+11:42:42
+ATTACH_X_18:
+RELOAD_PAUSE
+RELOAD_PAUSE
+NEXT VOXEL: 26 at [0.0 -76.2 76.2] <-------------------------- VOXEL
+ATTACH voxel: 26 to 17 at -z
+ATTACH voxel: 26 to 23 at y
+ATTACH voxel: 26 to 25 at x
+11:44:33
+PLACE_VOXEL_Z_26:
+11:45:39
+ATTACH_Y_26:
+RELOAD_PAUSE
+11:46:49
+ATTACH_X_26:
+RELOAD_PAUSE
+RELOAD_PAUSE
+NEXT VOXEL: 24 at [-76.2 0.0 76.2] <-------------------------- VOXEL
+ATTACH voxel: 24 to 15 at -z
+ATTACH voxel: 24 to 21 at y
+ATTACH voxel: 24 to 23 at x
+11:48:32
+PLACE_VOXEL_Z_24:
+11:49:38
+ATTACH_Y_24:
+RELOAD_PAUSE
+11:50:53
+ATTACH_X_24:
+RELOAD_PAUSE
+RELOAD_PAUSE
+NEXT VOXEL: 27 at [-76.2 -76.2 76.2] <-------------------------- VOXEL
+ATTACH voxel: 27 to 18 at -z
+ATTACH voxel: 27 to 24 at y
+ATTACH voxel: 27 to 26 at x
+11:52:38
+PLACE_VOXEL_Z_27:
+11:55:23
+ATTACH_Y_27:
+RELOAD_PAUSE
+11:56:38
+ATTACH_X_27:
+RELOAD_PAUSE
+End Time:
+Monday, September 18, 2017 11:57:57
