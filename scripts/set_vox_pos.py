@@ -10,7 +10,7 @@ import time
 
 cwd = os.getcwd()
 shopbot_dir = "c:\\Program Files (x86)\\ShopBot\\ShopBot 3"
-shopbot_mode = str(5)  # 4 = move/cut (no stop), 5 = preview (no stop)
+shopbot_mode = str(4)  # 4 = move/cut (no stop), 5 = preview (no stop)
 
 
 if len(sys.argv)==2:
@@ -59,6 +59,6 @@ print tmp_filename + ' executing...',
 os.chdir(shopbot_dir)       # directory for SB3.exe
 os.system('SB3.exe "' + cwd + "\\" + tmp_filename + '",1,' + shopbot_mode)
 os.chdir(cwd)               # changing back to working directory
-time.sleep(2)               # wait 5 second for command to make it to shopbot before deleting tmp file
+time.sleep(10)              # wait 10 second for command to make it to shopbot before deleting tmp file
 os.remove(tmp_filename)     # remove temporary file
 print('completed')
