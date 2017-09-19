@@ -1,7 +1,11 @@
 '' PICKUP NUT '' 20170516: integrate nut loading
-&x_pickup_nut =   9.9    '' 20170830 - self alignment add-on; recalibrated; angle still a bit off
-&y_pickup_nut =  99.2
-&z_pickup_nut = -59.5
+&x_pickup_nut =   9.735    '' 20170919 - plate move; pickup zero - re zeroed
+&y_pickup_nut =  99.3
+&z_pickup_nut = -60.435
+''
+''&x_pickup_nut =   9.9    '' 20170830 - self alignment add-on; recalibrated; angle still a bit off
+''&y_pickup_nut =  99.2
+''&z_pickup_nut = -59.5
 ''
 ''&x_pickup_nut =  11.415    '' 20170828 - self alignment add-on; moving 3 mm back in x and up 3 mm
 ''&y_pickup_nut = 100.000
