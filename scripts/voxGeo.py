@@ -1,3 +1,6 @@
+'''
+DESCRIPTION: voxGeo.py defines sample voxel geometries
+'''
 import numpy as np                       # working with matrixes
 import copy                              # working with copies of lists
 
