@@ -52,11 +52,6 @@ def main():
     global SBP_output
     global output_fullpath_filename
     
-    # global in2mm         # set by voxUtils.setup_vox_geometry()
-    # global mm2in         # set by voxUtils.setup_vox_geometry()
-    # global vgeo          # set by voxUtils.setup_vox_geometry()
-    # global cuboct_verts  # set by voxUtils.setup_vox_geometry()
-    
     # checking inputs
     if len(sys.argv) != 2:
         print "ERROR - expecting input: geometry that is defined in geoVox.py; exiting..."
@@ -100,10 +95,6 @@ def main():
 def setup_GUI(fig):
     # working with GUI --------------------------------------------
     print '\ninitializing...'
-    # print 'SHELL, "echo ' + '"Start Time:' + ' >> voxBuildTiming.log"'
-    # print 'SHELL, "echo %date% %time% >> voxBuildTiming.log"'  # windows shell
-    # print 'SHELL, "date >> voxBuildTiming.log"'  # linux shell
-
     
     GUI = tk.Tk()
     GUI.title('CSL - Autovox')
@@ -287,8 +278,14 @@ def output_shopbot_build(voxMatrix):
     
     SBP_output.append('PRINT "Start Date Time:"\n')
     SBP_output.append('PRINT %(146); " "; %(147)\n')  # print date and time using shopbot
-    
-    SBP_output.append('PRINT "Voxel size ' + str(round(vgeo[0]*mm2in,1),round(vgeo[1]*mm2in,1),round(vgeo[2]*mm2in,1)) + ' in."\n\'\'\n')
+    SBP_output.append('PRINT "Settings:"\n')
+    SBP_output.append('PRINT "Software/Firmware:"\n')
+    SBP_output.append('PRINT %(48); "/"; %(49)\n')  # print date and time using shopbot
+    SBP_output.append('PRINT "Speeds:"\n')
+    SBP_output.append('PRINT "mx: "; %(71); " my: "; %(72); " mz: "; %(73); " ma: "; %(74); " mb: "; %(75);\n')
+    SBP_output.append('PRINT "jx: "; %(76); " jy: "; %(77); " jz: "; %(78); " ja: "; %(79); " jb: "; %(80);\n')
+    SBP_output.append('PRINT ""\n')
+    SBP_output.append('PRINT "Voxel size ' + str(round(vgeo[0]*mm2in,1)) + ',' + str(round(vgeo[1]*mm2in,1)) + ',' + str(round(vgeo[2]*mm2in,1)) + ' in."\n\'\'\n')
     
     # Account for pre-built seed structure ------------------------------------------------
     build_seed = build[:seeded_num]
@@ -341,9 +338,7 @@ def output_shopbot_build(voxMatrix):
         
         assembled.append(vox[each].id)  
     
-    # print 'SHELL, "echo ' + '"End Time:' + ' >> voxBuildTiming.log"'
-    # print 'SHELL, "echo %date% %time% >> voxBuildTiming.log"'  # windows shell
-    # print 'SHELL, "date >> voxBuildTiming.log"'  # linux shell
+    shp_reload()  # Return to reload position after build completes
     SBP_output.append('PRINT "End Time:"\n')
     SBP_output.append('PRINT %(146); " "; %(147)\n')  # print date and time using shopbot
     # print 'PRINT "Total Duration:"'  # shopbot's elasped time not quite working... outputed 0
