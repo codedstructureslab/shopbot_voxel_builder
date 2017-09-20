@@ -288,7 +288,7 @@ def output_shopbot_build(voxMatrix):
     SBP_output.append('PRINT "Start Date Time:"\n')
     SBP_output.append('PRINT %(146); " "; %(147)\n')  # print date and time using shopbot
     
-    SBP_output.append('PRINT "Voxel size [in.] ' + str([round(vgeo[0]*mm2in,1),round(vgeo[1]*mm2in,1),round(vgeo[2]*mm2in,1)]) + '"\n\'\'\n')
+    SBP_output.append('PRINT "Voxel size ' + str(round(vgeo[0]*mm2in,1),round(vgeo[1]*mm2in,1),round(vgeo[2]*mm2in,1)) + ' in."\n\'\'\n')
     
     # Account for pre-built seed structure ------------------------------------------------
     build_seed = build[:seeded_num]
@@ -355,7 +355,7 @@ def output_shopbot_build(voxMatrix):
 
     
 def shp_move_pickup_loc():
-    SBP_output.append('FP, move_to_pickup_zero.sbp, 1,1,1,1,0\n')
+    SBP_output.append('FP, move_pickup_zero.sbp, 1,1,1,1,0\n')
     
 
 def shp_pickup_screw():

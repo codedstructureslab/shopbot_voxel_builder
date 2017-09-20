@@ -360,6 +360,7 @@ def output_shopbot_build(voxMatrix):
     # print 'SHELL, "echo ' + '"End Time:' + ' >> voxBuildTiming.log"'
     # print 'SHELL, "echo %date% %time% >> voxBuildTiming.log"'  # windows shell
     # print 'SHELL, "date >> voxBuildTiming.log"'  # linux shell
+    SBP_output.append('JB 0\n')
     SBP_output.append('PRINT "End Time:"\n')
     SBP_output.append('PRINT %(146); " "; %(147)\n')  # print date and time using shopbot
     # print 'PRINT "Total Duration:"'  # shopbot's elasped time not quite working... outputed 0
