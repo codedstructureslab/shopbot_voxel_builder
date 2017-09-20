@@ -1,0 +1,81 @@
+Start Date Time:
+Wednesday, September 20, 2017 10:10:20
+Start Date Time:
+Wednesday, September 20, 2017 10:11:48
+Start Date Time:
+Wednesday, September 20, 2017 10:12:53
+Start Date Time:
+Wednesday, September 20, 2017 10:13:23
+Voxel size 3.0 x 3.0 x 3.0 in.
+10:13:23
+RELOAD_VOXEL_SCREW_NUT
+Start Date Time:
+Wednesday, September 20, 2017 10:15:50
+Voxel size 3.0 x 3.0 x 3.0 in.
+10:15:50
+RELOAD_VOXEL_SCREW_NUT
+Start Date Time:
+Wednesday, September 20, 2017 11:13:52
+Voxel size 3.0 x 3.0 x 3.0 in.
+11:13:52
+RELOAD_VOXEL_SCREW_NUT
+RELOAD_PAUSE
+NEXT VOXEL: 4 at [0.0 0.0 -76.2] <-------------------------- VOXEL
+ATTACH voxel: 4 to 2 at y
+ATTACH voxel: 4 to 3 at x
+11:16:23
+PLACE_VOXEL_Y_4:
+11:17:14
+ATTACH_X_4:
+11:17:14
+RELOAD_SCREW_NUT
+11:20:06
+RELOAD_SCREW_NUT
+RELOAD_PAUSE
+11:22:27
+RELOAD_VOXEL_SCREW_NUT
+RELOAD_PAUSE
+NEXT VOXEL: 7 at [76.2 0.0 0.0] <-------------------------- VOXEL
+ATTACH voxel: 7 to 3 at -z
+ATTACH voxel: 7 to 5 at y
+11:24:44
+PLACE_VOXEL_Z_7:
+11:26:19
+ATTACH_Y_7:
+11:26:19
+RELOAD_SCREW_NUT
+RELOAD_PAUSE
+11:29:35
+RELOAD_VOXEL_SCREW_NUT
+RELOAD_PAUSE
+NEXT VOXEL: 6 at [0.0 76.2 0.0] <-------------------------- VOXEL
+ATTACH voxel: 6 to 2 at -z
+ATTACH voxel: 6 to 5 at x
+11:31:52
+PLACE_VOXEL_Z_6:
+11:33:08
+ATTACH_X_6:
+11:33:08
+RELOAD_SCREW_NUT
+RELOAD_PAUSE
+11:35:57
+RELOAD_VOXEL_SCREW_NUT
+RELOAD_PAUSE
+NEXT VOXEL: 8 at [0.0 0.0 0.0] <-------------------------- VOXEL
+ATTACH voxel: 8 to 4 at -z
+ATTACH voxel: 8 to 6 at y
+ATTACH voxel: 8 to 7 at x
+11:38:14
+PLACE_VOXEL_Z_8:
+11:41:45
+ATTACH_Y_8:
+11:41:45
+RELOAD_SCREW_NUT
+RELOAD_PAUSE
+11:44:02
+ATTACH_X_8:
+11:44:02
+RELOAD_SCREW_NUT
+RELOAD_PAUSE
+End Time:
+Wednesday, September 20, 2017 11:46:16
