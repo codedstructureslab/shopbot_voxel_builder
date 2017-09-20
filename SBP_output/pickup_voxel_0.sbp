@@ -9,7 +9,7 @@
 ''&y_pickup_voxel = 228.05
 ''&z_pickup_voxel = -35.51
 ''
-vs 5,5,5,5,20,20,20,20         '' resume speed
+''vs 5,5,5,5,20,20,20,20         '' resume speed
 ''
 FP, load_nextVoxel.sbp,1,1,1,1,0        '' prepare next voxel
 ''
@@ -18,11 +18,11 @@ FP, effector_jawEnter.sbp,1,1,1,1,0
 ''
 j5 &x_pickup_voxel + 15, &y_pickup_voxel, &z_pickup_voxel, 0, 0             '' VOXEL approach position (+15mm in x)
 m3 &x_pickup_voxel +  5, &y_pickup_voxel, &z_pickup_voxel     '' move close (+5mm in x)
-vs 2,2,2,2,10,10,10,10                                        '' reduce speed
+''vs 2,2,2,2,10,10,10,10                                        '' reduce speed
 m3 &x_pickup_voxel, &y_pickup_voxel, &z_pickup_voxel          '' VOXEL pickup position
 FP, effector_gripperEngage.sbp,1,1,1,1,0                      '' Engage Gripper - pick up
 m3 &x_pickup_voxel + (&vox_approach_distance*&cos35), &y_pickup_voxel, &z_pickup_voxel + (&vox_approach_distance*&cos35)     '' move out +xz@45 deg (slowly)
-vs 5,5,5,5,20,20,20,20      '' resume speed
+''vs 5,5,5,5,20,20,20,20      '' resume speed
 j5 &x_pickup_voxel + 50, &y_pickup_voxel, &z_pickup_voxel + 50, 0, 0             '' VOXEL safe position (+50mm in x)
 END
 ''
