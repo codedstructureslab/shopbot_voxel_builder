@@ -2,9 +2,17 @@
 ''
 SA ''sets absolute coordinates
 ''
+PRINT ""
 PRINT "Start Date Time:"
 PRINT %(146); " "; %(147)
-PRINT "Voxel size 3.0 x 3.0 x 3.0 in."
+PRINT "Settings:"
+PRINT "Software/Firmware:"
+PRINT %(48); "/"; %(49)
+PRINT "Speeds:"
+PRINT "mxy: "; %(71); ",mz: "; %(73); ",ma: "; %(74); ",mb: "; %(75);
+PRINT "jxy: "; %(76); ",jz: "; %(78); ",ja: "; %(79); ",jb: "; %(80);
+PRINT ""
+PRINT "Voxel size 3.0 3.0 3.0 in."
 ''
 ''
 PRINT %(147)
@@ -304,6 +312,12 @@ MOVE_OUT_p120_8:
 ''Ok to move out B@+120?
 PAUSE
 FP, release_vox_p120.sbp, 1,1,1,1,0
+''
+PRINT "RELOAD_PAUSE"
+J5 -130,-300,170,0,0
+FP, effector_jawOpen.sbp,1,1,1,1,0
+''Finished screw/nut feed?
+PAUSE
 PRINT "End Time:"
 PRINT %(146); " "; %(147)
 ''
