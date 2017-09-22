@@ -1,0 +1,70 @@
+
+Start Date Time:
+Friday, September 22, 2017 10:47:22
+Settings:
+Software/Firmware:
+3.8.40/222
+Speeds:
+mxy: 3.00000000000001,mz: 3.00000000000001,ma: 3,mb: 3jxy: 33.0000000000001,jz: 33.0000000000001,ja: 33,jb: 33
+Voxel size 3.0 3.0 3.0 in.
+10:47:22
+RELOAD_VOXEL_SCREW_NUT
+RELOAD_PAUSE
+NEXT VOXEL: 4 at [0.0 0.0 -76.2] <-------------------------- VOXEL
+ATTACH voxel: 4 to 2 at y
+ATTACH voxel: 4 to 3 at x
+10:49:12
+PLACE_VOXEL_Y_4:
+10:50:02
+ATTACH_X_4:
+10:50:02
+RELOAD_SCREW_NUT
+RELOAD_PAUSE
+10:55:15
+RELOAD_VOXEL_SCREW_NUT
+RELOAD_PAUSE
+NEXT VOXEL: 7 at [76.2 0.0 0.0] <-------------------------- VOXEL
+ATTACH voxel: 7 to 3 at -z
+ATTACH voxel: 7 to 5 at y
+10:57:06
+PLACE_VOXEL_Z_7:
+10:58:19
+ATTACH_Y_7:
+10:58:19
+RELOAD_SCREW_NUT
+RELOAD_PAUSE
+11:01:46
+RELOAD_VOXEL_SCREW_NUT
+RELOAD_PAUSE
+NEXT VOXEL: 6 at [0.0 76.2 0.0] <-------------------------- VOXEL
+ATTACH voxel: 6 to 2 at -z
+ATTACH voxel: 6 to 5 at x
+11:03:42
+PLACE_VOXEL_Z_6:
+11:06:45
+ATTACH_X_6:
+11:06:45
+RELOAD_SCREW_NUT
+RELOAD_PAUSE
+11:10:36
+RELOAD_VOXEL_SCREW_NUT
+RELOAD_PAUSE
+NEXT VOXEL: 8 at [0.0 0.0 0.0] <-------------------------- VOXEL
+ATTACH voxel: 8 to 4 at -z
+ATTACH voxel: 8 to 6 at y
+ATTACH voxel: 8 to 7 at x
+11:12:24
+PLACE_VOXEL_Z_8:
+11:13:38
+ATTACH_Y_8:
+11:13:38
+RELOAD_SCREW_NUT
+RELOAD_PAUSE
+11:16:32
+ATTACH_X_8:
+11:16:32
+RELOAD_SCREW_NUT
+RELOAD_PAUSE
+RELOAD_PAUSE
+End Time:
+Friday, September 22, 2017 11:19:15
