@@ -1,6 +1,7 @@
 ''move to pickup_zero from base table zero
 FP cal_pickup_zero.sbp,1,1,1,1,0,0,0,0,1,1                '' loading calibrated values for position of pickup station
 J5 &zero_pX, &zero_pY, &zero_pZ + 50, &zero_PA, &zero_PB  '' moving to pickup postion offset by 50 mm in Z
+J5 &zero_pX, &zero_pY, &zero_pZ + 15                      '' jogging closer to pickup postion offset by 15 mm in Z
 M3 &zero_pX, &zero_pY, &zero_pZ                           '' moving to pickup position
 Z5                                                        '' zero local axes
 END
